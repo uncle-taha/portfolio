@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --font-primary: "League Spartan", sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+}
+
+html {
+  background-color: #dfe4f2;
+  color: #14121a;
+}
+
+html.dark {
+  background-color: #14121a;
+  color: #dfe4f2;
+}
+
+#root {
+  min-height: 100%;
+}
+/* @import "tailwindcss"; */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+
+  /* background-color: #e9ecf5; */
+}
+
+@keyframes gradient-x-rightToLeft {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@layer utilities {
+  .animate-gradient-rightToLeft {
+    animation: gradient-x-rightToLeft 3.5s linear infinite;
+  }
+
+  .bg-size-200 {
+    background-size: 800% 200%;
+  }
+}

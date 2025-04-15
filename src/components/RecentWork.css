@@ -1,0 +1,392 @@
+/* Main parent container that holds everything */
+.parent-div {
+  width: 100%;
+  height: 650px;
+
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: -30px;
+}
+
+/* Container that centers and holds all the UI elements */
+.container-div {
+  width: 1156px;
+  height: 610px;
+  position: relative;
+  margin: 0 38px;
+  overflow: hidden;
+}
+
+/* Main white background card */
+.div-1 {
+  width: 100%;
+  height: 610px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  overflow: hidden;
+}
+
+/* Large left panel/section */
+.div-2 {
+  width: 550px;
+  height: 523px;
+  background-image: url("../assets/pic1.png");
+  background-size: cover;
+  position: absolute;
+  top: 41px;
+  left: 38px;
+  border-radius: 29px;
+  border-bottom-right-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.div-2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.div-2:hover::after {
+  opacity: 1;
+}
+
+/* Bottom right panel */
+.div-3 {
+  width: 544px;
+  height: 245px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: absolute;
+  top: 326px;
+  left: 496px;
+  border-top-left-radius: 29px;
+  overflow: hidden;
+}
+
+/* Common styles for small UI elements */
+.div-4,
+.div-5,
+.div-7,
+.div-10,
+.div-11,
+.div-12,
+.div-13,
+.div-14,
+.div-15,
+.div-16,
+.div-17,
+.div-18,
+.div-19,
+.div-20 {
+  position: absolute;
+  background-color: #ddd;
+  opacity: 1;
+  overflow: hidden;
+}
+/* BOTTOm DIV  */
+.div-6 {
+  width: 320px;
+  height: 219px;
+  background-image: url("../assets/pic3.png");
+  background-size: cover;
+  background-position: left;
+  opacity: 1;
+  position: absolute;
+  top: 345px;
+  left: 520px;
+  border-radius: 24px;
+  overflow: hidden;
+  z-index: 2;
+  background-color: white;
+}
+.div-6::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* whitish transparent */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.div-6:hover::after {
+  opacity: 1;
+}
+/* MIDDLE BOTTOM arrow DONE*/
+.div-14 {
+  width: 50px;
+  height: 53px;
+  top: 342px;
+  left: 520px;
+  border-top-left-radius: 28px;
+  border-bottom-right-radius: 22px;
+  background-color: white;
+
+  z-index: 2;
+}
+
+/* MIDDLE BOTTOM bottom*/
+.div-4 {
+  width: 26px;
+  height: 28px;
+  top: 395px;
+  left: 520px;
+  background-color: #edd500;
+  border-top-left-radius: 20px;
+  box-shadow: -7px -7px 0 white;
+  z-index: 3;
+}
+/* MIDDLE-BOTTOM-top */
+.div-7 {
+  width: 30px;
+  height: 30px;
+  top: 345px;
+  left: 571px;
+  background-color: #edd500;
+  border-top-left-radius: 20px;
+  box-shadow: -7px -7px 0 white;
+  z-index: 3;
+}
+
+/* LEFT MIDDLE RIGHT */
+.div-5 {
+  width: 40px;
+  height: 40px;
+  top: 286px;
+  left: 548px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 7px 7px 0 white;
+  background-color: #d1d1d1;
+}
+
+/* Middle right panel/card */
+.div-8 {
+  width: 222px;
+  height: 282px;
+  background-image: url("../assets/pic2.png");
+  background-size: cover;
+  background-position: left;
+  opacity: 1;
+  position: absolute;
+  top: 44px;
+  left: 615px;
+  border-radius: 23px;
+  overflow: hidden;
+}
+.div-8::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* whitish transparent */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+.div-8:hover::after {
+  opacity: 1;
+}
+
+/* Far right panel/sidebar */
+.div-9 {
+  width: 255px;
+  height: 523px;
+  background-image: url("../assets/pic4.png");
+  background-size: cover;
+  background-position: left;
+  opacity: 1;
+  position: absolute;
+  top: 44px;
+  left: 862px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.div-9::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* whitish transparent */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+.div-9:hover::after {
+  opacity: 1;
+}
+
+/* RIGHT TOP BOTTOM */
+.div-10 {
+  width: 40px;
+  height: 40px;
+  top: 92px;
+  left: 38px;
+  border-top-left-radius: 18px;
+  box-shadow: -7px -7px 0 white;
+  background-color: #d3d3d3;
+}
+
+/* RIGHT arrow DONE */
+.div-11 {
+  width: 50px;
+  height: 53px;
+  top: 38px;
+  left: 38px;
+  border-bottom-right-radius: 24px;
+  background-color: white;
+}
+
+/* LEFT TOP  */
+.div-12 {
+  width: 25px;
+  height: 25px;
+  top: 42px;
+  left: 88px;
+  border-top-left-radius: 18px;
+  box-shadow: -7px -7px 0 white;
+
+  background-color: #d3d3d3;
+}
+
+/* LEFT-bottom-right corner DONE*/
+.div-13 {
+  width: 36px;
+  height: 32px;
+  top: 532px;
+  left: 460px;
+  background-color: #d3d3d3;
+  border-bottom-right-radius: 20px;
+  box-shadow: 7px 7px 0 white;
+}
+
+/* MIDDLE top arrow  DONE*/
+.div-15 {
+  width: 50px;
+  height: 53px;
+  top: 44px;
+  left: 615px;
+  border-bottom-right-radius: 22px;
+  background-color: white;
+}
+
+/* MIDDLE top top  DONE*/
+.div-16 {
+  width: 30px;
+  height: 29px;
+  top: 45px;
+  left: 665px;
+  transform: rotate(-90deg);
+  background-color: #274450;
+  border-top-right-radius: 20px;
+  box-shadow: 7px -7px 0 white;
+}
+
+/* MIDDLE-top bottom   DONE*/
+.div-17 {
+  width: 30px;
+  height: 29px;
+  top: 98px;
+  left: 615px;
+  transform: rotate(-90deg);
+  background-color: #36525e;
+  border-top-right-radius: 20px;
+  box-shadow: 7px -7px 0 white;
+}
+
+/* RIGHT arrow DONE   */
+.div-18 {
+  width: 50px;
+  height: 53px;
+  top: 44px;
+  left: 862px;
+  border-bottom-right-radius: 22px;
+  background-color: white;
+}
+
+/* RIGHT-top-top  DONE*/
+.div-19 {
+  width: 28px;
+  height: 31px;
+  top: 44px;
+  left: 912px;
+  background-color: #c8cbca;
+  border-top-left-radius: 20px;
+  box-shadow: -7px -7px 0 white;
+}
+
+/* RIGHT-top-bottom  DONE*/
+.div-20 {
+  width: 25px;
+  height: 27px;
+  top: 97px;
+  left: 862px;
+  background-color: #cbcbcb;
+  border-top-left-radius: 20px;
+  box-shadow: -7px -7px 0 white;
+}
+/* DARK MODE */
+
+.dark .div-1,
+.dark .div-3 {
+  background: #111827;
+}
+.dark .div-1 {
+  border: 1px solid white;
+}
+
+.dark .div-4,
+.dark .div-5,
+.dark .div-7,
+.dark .div-10,
+.dark .div-12,
+.dark .div-13,
+.dark .div-19,
+.dark .div-20 {
+  box-shadow: -7px -7px 0 #111827;
+}
+
+.dark .div-5,
+.dark .div-13 {
+  box-shadow: 7px 7px 0 #111827;
+}
+
+.dark .div-14,
+.dark .div-15,
+.dark .div-18,
+.dark .div-11 {
+  background: #111827;
+}
+
+.dark .div-2::after,
+.dark .div-6::after,
+.dark .div-8::after,
+.dark .div-9::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.dark .div-16,
+.dark .div-17 {
+  box-shadow: 7px -7px 0 #111827;
+}
+.dark .div-4,
+.dark .div-7 {
+  background-color: transparent;
+}
+/* specific off hover */
+.div-4,
+.div-7 {
+  background-color: transparent;
+}

@@ -1,0 +1,14 @@
+/* Light mode (default) */
+.bg-light {
+  background: linear-gradient(to right, #e6ebff 0%, white 40%);
+}
+
+.bg-light-reverse {
+  background: linear-gradient(to right, white 60%, #e6ebff 100%);
+}
+
+/* Dark mode override */
+.dark .bg-light,
+.dark .bg-light-reverse {
+  background: rgba(255, 255, 255, 0.2); /* Or any dark mode background */
+}
