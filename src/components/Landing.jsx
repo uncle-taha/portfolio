@@ -3,14 +3,20 @@ import Button from "../components/Button";
 import { MoveRight } from "lucide-react";
 import { FaTelegram, FaLinkedin, FaGithub } from "react-icons/fa";
 import portfolioImg from "../assets/portfolio.svg";
+import { motion } from "framer-motion";
 import "./Landing.css";
 
 function Landing() {
   return (
     <div className="min-h-screen w-full bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto px-4 sm:px-8 gap-12 lg:gap-24 stack-on-small">
-        {/* Image/Shape Section - Now comes first on mobile (order-1) */}
-        <div className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2 ">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, x: 100 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2 "
+        >
           <div className="animated-shape hidden md:block absolute inset-0 z-0 w-full h-full overflow-visible  ">
             <AnimatedShape
               className="absolute w-[120%] h-[120%] -left-10 -top-10 lg:w-[160%] lg:h-[210%] lg:-left-0 lg:-top-70 
@@ -26,10 +32,15 @@ function Landing() {
             [@media(max-width:1280px)]:right-[6px] 
             "
           />
-        </div>
+        </motion.div>
 
-        {/* Text Content Section - Now comes second on mobile (order-2) */}
-        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 text-stack">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, x: -100 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 text-stack"
+        >
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-primary">
             Hello!
           </h1>
@@ -65,7 +76,7 @@ function Landing() {
             <FaLinkedin className="hover:text-[#0a66c2] transition-colors" />
             <FaTelegram className="hover:text-[#0088cc] transition-colors" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

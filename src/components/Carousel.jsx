@@ -7,6 +7,7 @@ import {
   Palette,
 } from "lucide-react";
 import { SiFigma, SiTailwindcss } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 export default function TechCarousel({ darkMode }) {
   const [isHovering, setIsHovering] = useState(false); // Tracks hover state
@@ -29,6 +30,10 @@ export default function TechCarousel({ darkMode }) {
     },
     { name: "React", icon: <Atom className="w-12 h-12 text-cyan-500" /> },
     { name: "Design", icon: <Palette className="w-12 h-12 text-pink-500" /> },
+    {
+      name: "Framer Motion",
+      icon: <TbBrandFramerMotion className="w-12 h-12   text-purple-500 " />,
+    },
   ];
 
   // Duplicates list for seamless looping

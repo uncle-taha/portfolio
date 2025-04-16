@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Title from "./Title";
 import university from "../assets/university.png";
+
 export default function FAQSection() {
   const faqs = [
     {

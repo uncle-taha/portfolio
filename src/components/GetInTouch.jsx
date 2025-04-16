@@ -1,9 +1,16 @@
 import { Mail } from "lucide-react";
 import Title from "./Title";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <div className="w-full max-w-6xl mx-auto px-10 pb-20 pt-16 md:px-10 lg:px-0">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="w-full max-w-6xl mx-auto px-10 pb-20 pt-16 md:px-10 lg:px-0"
+    >
       <Title
         title="Let’s build something cool"
         paragraph="Reach out if you have design ideas or want to collaborate — I’d love to chat."
@@ -34,6 +41,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar({ children, darkMode, toggleDarkMode }) {
   // burger toggle
@@ -32,11 +33,17 @@ function Navbar({ children, darkMode, toggleDarkMode }) {
         <div className="fixed left-10 cursor-pointer">{children}</div>
         <div className=" flex items-center ml-auto mr-10 w-full justify-end text-xl ">
           <ul className="hidden md:flex cursor-pointer gap-2 sm:gap-4 md:gap-8 lg:gap-12 ">
-            <li className="py-1 relative group">Home</li>
-            <li className="py-1 relative group">About</li>
+            <li className="py-1 relative group">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="py-1 relative group">
+              <Link to="/about">About</Link>
+            </li>
             <li className="py-1 relative group">Portfolio</li>
             <li className="py-1 relative group">Services</li>
-            <li className="dark:text-[#0088cc]">Contact</li>
+            <li className="dark:text-[#0088cc]">
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </div>
         {/* Burger Icon */}

@@ -1,6 +1,7 @@
 import "./RecentWork.css";
 import { CircleArrowUp } from "lucide-react";
 import Title from "../components/Title";
+import { motion } from "framer-motion";
 
 function RecentWork() {
   return (
@@ -9,7 +10,13 @@ function RecentWork() {
         title="Recent Work"
         paragraph="Dive into my latest graphic and web design projects and case studies, showcasing my unique expertise and creative process."
       />
-      <div className="parent-div   ">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="parent-div   "
+      >
         <div className="container-div  dark:bg-gray-900">
           <div className="div-1 rounded-3xl object-cover dark:bg-gray-900 "></div>
           <div class="div-2 cursor-pointer "></div>
@@ -40,7 +47,7 @@ function RecentWork() {
           <div class="div-19 "></div>
           <div class="div-20 "></div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
