@@ -9,7 +9,6 @@ import RecentWork from "../components/RecentWork";
 import SmallScreens from "../components/SmallScreens";
 import cardOne from "../assets/card1.png";
 import cardTwo from "../assets/card2.png";
-import { Link } from "react-router-dom";
 
 // import "./Home.css";
 function Home() {

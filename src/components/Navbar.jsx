@@ -39,9 +39,11 @@ function Navbar({ children, darkMode, toggleDarkMode }) {
             <li className="py-1 relative group">
               <Link to="/about">About</Link>
             </li>
-            <li className="py-1 relative group">Portfolio</li>
+            <li className="py-1 relative group">
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
             <li className="py-1 relative group">Services</li>
-            <li className="dark:text-[#0088cc]">
+            <li className=" dark:text-[#0088cc] m-0 p-0">
               <Link to="/contact">Contact</Link>
             </li>
           </ul>

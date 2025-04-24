@@ -21,7 +21,7 @@ function SmallScreens() {
         viewport={{ once: true }}
         className=" flex items-center justify-center px-4 py-2 md:px-10 mb-10 "
       >
-        <div className="grid grid-cols-2 md:grid-cols-12 gap-6  sm:gap-6 w-full max-w-6xl bg-white p-10 rounded-3xl dark:bg-gray-900 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] dark:border">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:grid-cols-2 sm:gap-6 w-full max-w-6xl bg-white p-10 rounded-3xl dark:bg-gray-900 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] dark:border">
           {/* Top left */}
           <div
             className="group relative col-span-1 md:col-span-8 aspect-square md:aspect-[2/1]  rounded-[34px] bg-left-top bg-cover bg-no-repeat cursor-pointer overflow-hidden"

@@ -28,7 +28,7 @@ function Landing() {
             src={portfolioImg}
             alt="Portfolio"
             className="relative z-10 rounded-full h-[400px] w-full max-w-[350px] object-cover pointer-events-none 
-                        md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 
+                        md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-8
             [@media(max-width:1280px)]:right-[6px] 
             "
           />
@@ -46,11 +46,18 @@ function Landing() {
           </h1>
 
           <div className="flex flex-wrap justify-center lg:justify-start items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4">
-            <span className="mr-2 lg:mr-4 ">My name is</span>
+            <span className="mr-2 lg:mr-4">My name is</span>
             <button className="relative group">
-              <span className="cursor-pointer font-semibold">taha</span>
-              <div className="absolute left-1/2 lg:left-full top-full mt-2 w-max max-w-xs px-4 py-2 text-base sm:text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg transform -translate-x-1/2 lg:translate-x-0 lg:ml-2 hidden sm:block">
-                Yes, it's 'taha' with a lowercase 't'
+              <span className="cursor-pointer font-semibold ">taha</span>
+              <div
+                className="absolute 
+        lg:-top-[35px] lg:left-[0px]
+        md:top-[0px] md:right-[-210px]
+        w-max max-w-xs px-4 py-2 text-base sm:text-sm text-white bg-gray-800 rounded 
+        opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-lg hidden sm:block"
+              >
+                Yes, With a lowercase 't'
+                <div className="hidden lg:block absolute top-[30px] left-4 w-3 h-3 bg-gray-800 rotate-45"></div>
               </div>
             </button>
           </div>

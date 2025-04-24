@@ -4,6 +4,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
 function App() {
   const routes = createBrowserRouter([
     // prettier-ignore
@@ -22,6 +23,10 @@ function App() {
         {
           path: "/contact",
           element: <Contact/>,
+        },
+        {
+          path: "/portfolio",
+          element: <Portfolio />,
         }
       ] },
   ]);
