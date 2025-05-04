@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 function MainLayout() {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,6 +24,7 @@ function MainLayout() {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
         <Logo className="mr-auto" />
       </Navbar>

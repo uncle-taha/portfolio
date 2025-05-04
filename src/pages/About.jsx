@@ -1,242 +1,284 @@
-import { Download } from "lucide-react";
-
-import portfolioImg from "../assets/portfolio.svg";
-import university from "../assets/university.png";
+import abougBg from "../assets/aboutPage.png";
+import Soccer from "../assets/personal/soccer.png";
+import Tennis from "../assets/personal/tennis.png";
+import CounterStrike from "../assets/personal/csgo.png";
+import Reading from "../assets/personal/reading.png";
+import Listening from "../assets/personal/music.png";
+import Runnig from "../assets/personal/running.png";
+import Chess from "../assets/personal/chess.png";
 import { motion } from "framer-motion";
 
 export default function About() {
+  const categories = [
+    {
+      name: "Soccer",
+      img: Soccer,
+    },
+    {
+      name: "Table Tennis",
+      img: Tennis,
+    },
+    {
+      name: "Counter-Strike",
+      img: CounterStrike,
+    },
+    {
+      name: "Reading",
+      img: Reading,
+    },
+    {
+      name: "Listening to musics",
+      img: Listening,
+    },
+    {
+      name: "Running",
+      img: Runnig,
+    },
+    {
+      name: "Chess",
+      img: Chess,
+    },
+  ];
+
   return (
     <>
-      <div className="container max-w-6xl mx-auto px-4 py-12 md:py-20 pt-32">
-        <div className="grid -gap-2 md:grid-cols-2 md:gap-16 lg:gap-16">
-          {/* Image Column */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, x: -100 }}
+      <div className="max-w-6xl bg-white h-full flex flex-col justify-center items-center m-auto my-30 rounded-[20px] border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border dark:bg-gray-900 ">
+        <div className="relative w-[90%] h-[600px] my-15">
+          <motion.img
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center justify-start mt-20 md:sticky md:top-50 md:self-start"
-          >
-            <div className="relative mb-6   overflow-hidden rounded-full bg-gray-100 shadow-lg">
-              <img
-                src={portfolioImg}
-                alt="Profile picture"
-                className="h-[300px] w-[300px] "
-              />
-            </div>
-
-            <a href="#" className="mt-6 ">
-              <button className="flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700 cursor-pointer">
-                <Download className="h-4 w-4" />
-                Download Resume
-              </button>
-            </a>
-          </motion.div>
-
-          {/* Content Column */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-8 mt-30 px-6 text-center md:text-left "
-          >
-            {/* Header */}
-            <div>
-              <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-                Abdusalomov Ahadbek
-              </h1>
-              <p className="mt-2 text-xl">Front-End Web Developer & Designer</p>
-            </div>
-
-            <hr className="border-t border-gray-200" />
-
-            {/* About Section */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-bold">About Me</h2>
-              <div className="space-y-4 text-base md:text-lg mt-6 max-w-xl lg:max-w-2xl">
-                <p>
-                  Hi, I'm Ahadbek (you can call me taha, with a lowercase "t").
-                  I'm a web developer with a strong foundation in design and
-                  user experience. I hold a degree in Computer Science, which
-                  gave me a solid understanding of software development and
-                  design principles. Since graduating, I’ve continued to enhance
-                  my skills through practical experience and ongoing learning.
-                </p>
-                <p>
-                  My web development journey began well before my portfolio.
-                  Over the years, I’ve worked on various projects, from simple
-                  websites to more complex applications, combining hands-on
-                  experience with my formal education in front-end development
-                  and design.
-                </p>
-                <p>
-                  Outside of coding, I follow the latest design trends, read
-                  industry blogs, and sketch UI concepts for future projects.
-                  I’m always eager to learn new technologies and improve my
-                  skills through real-world applications.
-                </p>
+            src={abougBg}
+            alt=""
+            className="w-full h-full object-cover rounded-[20px] border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+          />
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-start p-10 justify-start md:justify-center md:gap-40">
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.8, x: -75 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold mb-4 leading-tight text-[64px] dark:text-black"
+            >
+              Igniting <br />
+              Ideas <br />
+              Everywhere
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.9, x: 95 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="hidden md:block text-lg text-white font-semibold "
+            >
+              Hi, I'm Ahadbek (you can call me taha). I'm a web developer with a
+              background in Computer Science and a strong focus on design and
+              user experience. I specialize in crafting user-friendly web
+              experiences that balance clean design with solid code, blending
+              formal education with hands-on experience. Beyond coding, I
+              explore design trends, sketch UI ideas, and continuously learn to
+              grow as a developer.
+            </motion.p>
+          </div>
+        </div>
+        <div className="block md:hidden mx-6  bg-gray-50 p-8 rounded-lg dark:bg-white/20 dark:text-white">
+          <p className="  ">
+            Hi, I'm Ahadbek (you can call me taha). I'm a web developer with a
+            background in Computer Science and a strong focus on design and user
+            experience. I specialize in crafting user-friendly web experiences
+            that balance clean design with solid code, blending formal education
+            with hands-on experience. Beyond coding, I explore design trends,
+            sketch UI ideas, and continuously learn to grow as a developer.
+          </p>
+        </div>
+        {/* skills expersitse */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mx-15 my-10"
+        >
+          <h2 className="text-2xl font-bold mb-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-2">
+            Skills & Expertise
+          </h2>
+          <section className="flex flex-wrap gap-6 justify-between">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, x: -75 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex-1 min-w-[280px] rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20"
+            >
+              <h3 className="mb-4 font-semibold">Frontend Development</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="badge">HTML</span>
+                <span className="badge">CSS</span>
+                <span className="badge">JavaScript</span>
+                <span className="badge">React</span>
+                <span className="badge">Tailwind CSS</span>
               </div>
-            </section>
+            </motion.div>
 
-            {/* Skills Section */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-bold">Skills & Expertise</h2>
-
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20">
-                <h3 className="mb-4 font-semibold">Frontend Development</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    HTML
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    CSS
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    JavaScript
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    React
-                  </span>
-                  {/* <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                  Next.js
-                </span> */}
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    Tailwind CSS
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    Responsive Design
-                  </span>
-                </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex-1 min-w-[280px] rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20"
+            >
+              <h3 className="mb-4 font-semibold">UI/UX Design</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="badge">Figma</span>
+                <span className="badge">Wireframing</span>
+                <span className="badge">Prototyping</span>
+                <span className="badge">Color Theory</span>
+                <span className="badge">Typography</span>
               </div>
+            </motion.div>
 
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20">
-                <h3 className="mb-4 font-semibold">UI/UX Design</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    Figma
-                  </span>
-
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    Wireframing
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    Prototyping
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    Color Theory
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    Typography
-                  </span>
-                </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, x: 75 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex-1 min-w-[280px] rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20"
+            >
+              <h3 className="mb-4 font-semibold">Tools & Technologies</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="badge">Git</span>
+                <span className="badge">GitHub</span>
+                <span className="badge">VS Code</span>
+                <span className="badge">npm</span>
+                <span className="badge">Responsive Design</span>
               </div>
+            </motion.div>
+          </section>
+        </motion.div>
+        {/* education */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mx-15 my-10"
+        >
+          <section className=" bg-white dark:bg-gray-900 ">
+            <h2 className="text-2xl font-bold mb-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-2">
+              Education & Learning
+            </h2>
 
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20">
-                <h3 className="mb-4 font-semibold">Tools & Technologies</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    Git
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    GitHub
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    VS Code
-                  </span>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800">
-                    npm
-                  </span>
-                </div>
-              </div>
-            </section>
-
-            {/* Education Section */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-bold">Education & Learning</h2>
-
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20 dark:text-white">
-                <div className="flex flex-col justify-between gap-2 sm:flex-row ">
-                  <div>
-                    <h3 className="font-semibold">Web Development & Design</h3>
-                    <p className="text-gray-500 dark:text-white">
-                      Online Courses & University Education
-                    </p>
-                  </div>
-                </div>
-                <ul className="mt-4 list-inside list-disc space-y-2 text-gray-500 dark:text-white">
+            <div className="grid md:grid-cols-2 gap-6 ">
+              {/* Web Development */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, x: -75 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-gray-50 p-6 rounded-lg dark:bg-white/20 dark:text-white border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              >
+                <h3 className="text-xl font-semibold mb-2">
+                  Web Development & Design
+                </h3>
+                <h4 className="text-lg text-gray-600 mb-4 dark:text-white">
+                  Online Courses & University Education
+                </h4>
+                <ul className="list-disc pl-5 space-y-2">
                   <li>
                     Completed comprehensive courses on HTML, CSS, and JavaScript
                   </li>
                   <li>
-                    Gained experience with React through project-based tutorials
+                    Gained experience with React through practical projects
                   </li>
                   <li>Studied UI/UX design principles and best practices</li>
                   <li>
                     Deepened knowledge of software development through
                     university studies
                   </li>
+                  <li>
+                    Taught myself design through constant practice and
+                    real-world application
+                  </li>
                 </ul>
-              </div>
+              </motion.div>
 
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20">
-                <div className="flex flex-col justify-between gap-2 sm:flex-row">
-                  <div>
-                    <h3 className="font-semibold dark:text-white">
-                      Bachelor of Science in Computer Science
-                    </h3>
-                    <span className="flex items-center gap-2 dark:text-white">
-                      Korea University
-                      <img
-                        src={university}
-                        alt="Korea University"
-                        className="h-8 bg-transparent"
-                      />
-                    </span>
-                  </div>
-                </div>
-                <p className="mt-4 text-gray-500 dark:text-white">
+              {/* Computer Science */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, x: 75 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-gray-50 p-6 rounded-lg dark:bg-white/20 dark:text-white border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              >
+                <h3 className="text-xl font-semibold mb-2">
+                  Bachelor of Science in Computer Science
+                </h3>
+                <h4 className="text-lg text-gray-600 mb-4 dark:text-white">
+                  Korea University
+                </h4>
+                <p className="mb-4">
                   Studied fundamental computer science concepts including
                   algorithms, data structures, and software engineering
-                  principles. Focused on web technologies and user interface
-                  design.
+                  principles, programming languages and user interface design.
                 </p>
-              </div>
-            </section>
 
-            {/* Personal Interests */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-bold">Personal Interests</h2>
-              <div className="">
-                <p>
-                  Outside of web development, I enjoy playing soccer, table
-                  tennis, playing Counter Strike online game. I'm also
-                  passionate about continuous learning and regularly take online
-                  courses to expand my knowledge in various fields.
-                </p>
-              </div>
-            </section>
+                <div className="mt-4">
+                  <h4 className="text-lg font-medium mb-2">Languages</h4>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>English</li>
+                    <li>Korean</li>
+                    <li>Uzbek</li>
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </motion.div>
+        {/* personal interests cicle stuff  */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mx-15 my-10"
+        >
+          <h2 className="text-2xl font-bold mb-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-2 ">
+            Personal Interests
+          </h2>
 
-            {/* Contact */}
-            <section className="space-y-4 ">
-              <h2 className="text-2xl font-bold">Contact</h2>
-              <div className="grid gap-4 sm:grid-cols-2 ">
-                <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20">
-                  <h3 className="font-medium">Email</h3>
-                  <p className="text-gray-500 dark:text-white">
-                    taxa.king95@mail.ru
-                  </p>
-                </div>
-                <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20">
-                  <h3 className="font-medium">Location</h3>
-                  <p className="text-gray-500 dark:text-white">
-                    Seoul, South Korea
-                  </p>
-                </div>
-              </div>
-            </section>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="my-20 mx-3"
+          >
+            <ul className="flex flex-wrap justify-center gap-6">
+              {categories.map((cat, idx) => (
+                <li key={idx} className="inline-block text-center">
+                  <a className="relative block w-[208px] h-[208px] rounded-full p-2 transition duration-300 group cursor-pointer">
+                    <span className="absolute inset-0 border-[9px] border-[#BDCBD6] rounded-full transition-transform duration-400 group-hover:scale-0 z-10"></span>
+                    <img
+                      src={cat.img}
+                      className={`rounded-full absolute top-[2px] left-[25px] w-[150px] h-[150px] object-contain dark:invert 
+                        ${cat.name === "Table Tennis" ? "scale-60" : ""}
+                         ${
+                           cat.name === "Soccer"
+                             ? "scale-[.8] top-[-20px]"
+                             : "top-[15px]"
+                         }
+                        ${cat.name === "Running" ? "scale-80" : ""}`}
+                    />
+                    <h3 className="relative z-20 inline-block mt-[130px] px-2 py-1 bg-blue-100 text-blue-800 text-sm leading-5 shadow group-hover:opacity-0 group-hover:scale-150 transition-all duration-500">
+                      {cat.name}
+                    </h3>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

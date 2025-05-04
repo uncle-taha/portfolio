@@ -10,29 +10,33 @@ function Landing() {
   return (
     <div className="min-h-screen w-full bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto px-4 sm:px-8 gap-12 lg:gap-24 stack-on-small">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, x: 100 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2 "
-        >
-          <div className="animated-shape hidden md:block absolute inset-0 z-0 w-full h-full overflow-visible  ">
+        <div className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2 ">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: -100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="animated-shape hidden md:block absolute inset-0 z-0 w-full h-full overflow-visible  "
+          >
             <AnimatedShape
               className="absolute w-[120%] h-[120%] -left-10 -top-10 lg:w-[160%] lg:h-[210%] lg:-left-0 lg:-top-70 
             cursor-pointer lg-only-shape-position md-only-shape-position sm-shape 
             "
             />
-          </div>
-          <img
+          </motion.div>
+          <motion.img
             src={portfolioImg}
             alt="Portfolio"
             className="relative z-10 rounded-full h-[400px] w-full max-w-[350px] object-cover pointer-events-none 
                         md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-8
             [@media(max-width:1280px)]:right-[6px] 
             "
+            initial={{ opacity: 0, scale: 0.9, y: -100, x: 50 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           />
-        </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9, x: -100 }}

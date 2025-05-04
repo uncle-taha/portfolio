@@ -86,7 +86,8 @@ export default function TechCarousel({ darkMode }) {
           {loopedTechnologies.map((tech, index) => (
             <div
               key={index}
-              className="flex flex-col items-center bg-white rounded-2xl shadow-sm p-6 mx-2 min-w-[150px] md:min-w-[210px] md:h-[120px] border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border dark:text-white"
+              className="flex flex-col items-center bg-white rounded-2xl shadow-sm p-6 mx-2 min-w-[150px] md:min-w-[210px] md:h-[120px]
+                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border dark:text-white"
             >
               {tech.icon}
               <span className="font-bold text-lg mt-2">{tech.name}</span>
