@@ -1,6 +1,14 @@
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 function Footer({ darkMode }) {
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Blog", href: "/blogpage" },
+  ];
+
   return (
     <div>
       <section
@@ -17,9 +25,11 @@ function Footer({ darkMode }) {
                 Hands-on graphic design solutions that <br />
                 connect with your target audience
               </p>
-              <div className="flex justify-center md:justify-start mt-6">
-                <Button label="Contact" classname="px-10 w-auto" />
-              </div>
+              <Link to="/contact">
+                <div className="flex justify-center md:justify-start mt-6">
+                  <Button label="Contact" classname="px-10 w-auto" />
+                </div>
+              </Link>
             </div>
 
             {/* Right Side */}
@@ -30,13 +40,13 @@ function Footer({ darkMode }) {
                   Menu
                 </p>
                 <ul className="mt-6 space-y-4">
-                  {["Home", "About", "Services", "Portfolio"].map((item) => (
-                    <li key={item}>
+                  {navItems.map(({ label, href }) => (
+                    <li key={label}>
                       <a
-                        href="#"
-                        className="flex justify-center md:justify-start md:text-lg transition-all duration-200 hover:text-blue-600 "
+                        href={href}
+                        className="flex justify-center md:justify-start md:text-lg transition-all duration-200 hover:text-blue-600"
                       >
-                        {item}
+                        {label}
                       </a>
                     </li>
                   ))}

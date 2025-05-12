@@ -56,3 +56,12 @@ body {
 .badge {
   @apply rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-800;
 }
+/* hide scrolls  */
+/* Hide scrollbar for all browsers */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

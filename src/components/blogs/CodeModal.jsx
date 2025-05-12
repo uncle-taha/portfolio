@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import materialDark from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
 
 export default function CodeModal({ codeString }) {
   const [open, setOpen] = useState(false);
@@ -61,7 +61,7 @@ export default function CodeModal({ codeString }) {
 
       {open && createPortal(modal, document.body)}
 
-      <hr className="mt-20 border-t border-gray-400 w-full max-w-6xl mx-auto" />
+      <hr className="mt-20 border-t-[2px] border-gray-400 w-full max-w-6xl mx-auto" />
     </>
   );
 }

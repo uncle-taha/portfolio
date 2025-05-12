@@ -5,10 +5,16 @@ import { FaTelegram, FaLinkedin, FaGithub } from "react-icons/fa";
 import portfolioImg from "../assets/portfolio.svg";
 import { motion } from "framer-motion";
 import "./Landing.css";
+import FloatingPaths from "./Floatingpaths";
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
-    <div className="min-h-screen w-full bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
+    <div className="relative z-0 min-h-screen w-full bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
+      <div className="absolute inset-0 z-0">
+        <FloatingPaths position={1} />
+        <FloatingPaths position={-1} />
+      </div>
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto px-4 sm:px-8 gap-12 lg:gap-24 stack-on-small">
         <div className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2 ">
           <motion.div
@@ -76,15 +82,31 @@ function Landing() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 mt-6 px-6 py-3 w-fit rounded-[70px] bg-white/20 shadow-lg backdrop-blur-[5.2px] border border-white/80">
-            <span className="hover:text-blue-600 text-center hidden sm:block cursor-pointer">
-              Explore Projects
-            </span>
-            <Button label="Ready to Collab?" icon={MoveRight} />
+            <Link to="/portfolio">
+              <span className="hover:text-blue-600 text-center hidden sm:block cursor-pointer">
+                Explore Projects
+              </span>
+            </Link>
+            <Link to="/contact">
+              <Button label="Ready to Collab?" icon={MoveRight} />
+            </Link>
           </div>
 
-          <div className="flex flex-row justify-center lg:justify-start space-x-6 text-3xl md:text-4xl mt-6 cursor-pointer">
-            <FaGithub className="hover:text-[#4078c0] transition-colors" />
-            <FaLinkedin className="hover:text-[#0a66c2] transition-colors" />
+          <div className="flex flex-row justify-center lg:justify-start space-x-6 text-3xl md:text-4xl mt-6 cursor-pointer z-10">
+            <a
+              href="https://github.com/uncle-taha"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="hover:text-[#4078c0] transition-colors" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/taha-497a7820b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="hover:text-[#0a66c2] transition-colors" />
+            </a>
             <FaTelegram className="hover:text-[#0088cc] transition-colors" />
           </div>
         </motion.div>

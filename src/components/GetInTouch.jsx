@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
 import Title from "./Title";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -31,14 +32,16 @@ export default function HeroSection() {
         </div>
 
         <div className="mt-8 md:mt-0">
-          <div className="p-1.5 rounded-full border-2 border-white">
-            <button
-              className="min-w-[187px] bg-white text-gray-800 hover:bg-black/60 hover:text-white transition-colors rounded-full 
+          <Link to="/contact">
+            <div className="p-1.5 rounded-full border-2 border-white">
+              <button
+                className="min-w-[187px] bg-white text-gray-800 hover:bg-black/60 hover:text-white transition-colors rounded-full 
             py-4 px-8 flex items-center gap-2 font-medium cursor-pointer "
-            >
-              Get In Touch <Mail className="ml-1" size={20} />
-            </button>
-          </div>
+              >
+                Get In Touch <Mail className="ml-1" size={20} />
+              </button>
+            </div>
+          </Link>
         </div>
       </div>
     </motion.div>

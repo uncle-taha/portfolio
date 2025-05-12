@@ -179,7 +179,7 @@ export default ShoppingCart;
 
   return (
     <>
-      <div className="container mx-auto px-4 py-8 max-w-6xl  rounded-2xl border-[0.2px] dark:text-white dark:bg-white/20">
+      <div className="container mx-auto px-4 py-8 max-w-6xl  rounded-2xl border-[0.2px] dark:text-white dark:bg-white/20 bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Cart Section */}
           <div className="lg:col-span-2">

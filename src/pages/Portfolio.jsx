@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("Logos");
-  const tabs = ["Logos", "Websites", "For Fun"];
+  const tabs = ["Logos", "Websites", "My Galley"];
 
   return (
     <div className="min-h-screen  p-6 pt-30">
@@ -163,7 +163,7 @@ export default function Portfolio() {
           </div>
         )} */}
 
-        {activeTab === "For Fun" && (
+        {activeTab === "My Galley" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:h-[524px]">
             <div className="bg-white rounded-3xl overflow-hidden shadow-sm lg:col-span-2 ">
               <div className="h-full w-full flex items-center justify-center p-8">
