@@ -107,7 +107,13 @@ function Landing() {
             >
               <FaLinkedin className="hover:text-[#0a66c2] transition-colors" />
             </a>
-            <FaTelegram className="hover:text-[#0088cc] transition-colors" />
+            <a
+              href="https://t.me/topchikimbu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTelegram className="hover:text-[#0088cc] transition-colors" />
+            </a>
           </div>
         </motion.div>
       </div>

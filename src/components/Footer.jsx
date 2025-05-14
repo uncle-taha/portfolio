@@ -59,18 +59,32 @@ function Footer({ darkMode }) {
                   Social
                 </p>
                 <ul className="mt-6 space-y-4">
-                  {["GitHub", "LinkedIn", "Telegram", "Instagram"].map(
-                    (item) => (
-                      <li key={item}>
-                        <a
-                          href="#"
-                          className="flex justify-center md:justify-start transition-all duration-200 hover:text-blue-600 md:text-lg"
-                        >
-                          {item}
-                        </a>
-                      </li>
-                    )
-                  )}
+                  {[
+                    {
+                      name: "GitHub",
+                      link: "https://github.com/uncle-taha",
+                    },
+                    {
+                      name: "LinkedIn",
+                      link: "https://www.linkedin.com/in/taha-497a7820b/",
+                    },
+                    { name: "Telegram", link: "https://t.me/topchikimbu" },
+                    {
+                      name: "Instagram",
+                      link: "https://www.instagram.com/your_username",
+                    },
+                  ].map(({ name, link }) => (
+                    <li key={name}>
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex justify-center md:justify-start transition-all duration-200 hover:text-blue-600 md:text-lg"
+                      >
+                        {name}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

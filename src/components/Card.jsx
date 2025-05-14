@@ -1,6 +1,7 @@
 import { PenLine, MoveRight } from "lucide-react";
 import { motion } from "framer-motion";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 export default function Card({
   cardLogo,
@@ -61,12 +62,14 @@ export default function Card({
           </p>
 
           <div className="flex flex-row items-center pt-4 group cursor-pointer hover:text-blue-600">
-            <button className="font-medium text-gray-800 hover:text-blue-600 cursor-pointer flex items-center dark:text-gray-200 dark:hover:text-indigo-400">
-              {cardButton}
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">
-                <MoveRight />
-              </span>
-            </button>
+            <Link to="/contact">
+              <button className="font-medium text-gray-800 hover:text-blue-600 cursor-pointer flex items-center dark:text-gray-200 dark:hover:text-indigo-400">
+                {cardButton}
+                <span className="ml-2 group-hover:translate-x-1 transition-transform">
+                  <MoveRight />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

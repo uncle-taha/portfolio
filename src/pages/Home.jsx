@@ -40,9 +40,9 @@ function Home() {
       />
       <Card
         cardLogo="Brand Identity"
-        cardTitle="Build a Strong Brand Identity"
-        cardParagraph="We blend creativity and strategy to create brands that leave a long lasting impressions on your audience"
-        cardButton="Become memorable bow"
+        cardTitle="Designing Impactful Digital Experiences"
+        cardParagraph="I merge creative design with front-end expertise to build distinctive, lasting brand identities that connect with your audience across every screen."
+        cardButton="Let's Set the Foundation"
         reverseLayout={true}
         cardImg={
           <img
@@ -55,7 +55,7 @@ function Home() {
         cardLogo="Web Design"
         cardTitle="Bringing Your Vision to the Web"
         cardParagraph="Building visually stunning and reliable website with robust functionality, great SEO, and high page speed scores"
-        cardButton="Get Notified Online"
+        cardButton="Let’s Bring Ideas to Life"
         reverseLayout={false}
         cardImg={<img src={cardOne} className="w-full h-auto" />}
       />
