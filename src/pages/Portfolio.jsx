@@ -11,7 +11,7 @@ export default function Portfolio() {
   });
 
   const [likesMap, setLikesMap] = useState({});
-  const tabs = ["Logos", "Websites", "My Gallery"];
+  const tabs = ["Websites", "Logos", "My Gallery"];
 
   const openModal = (src, alt, title, key) => {
     setModal({
@@ -62,7 +62,7 @@ export default function Portfolio() {
       </div>
 
       <div className="max-w-7xl mx-auto">
-        {activeTab === "Logos" && (
+        {activeTab === "Websites" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="col-span-full lg:col-span-2 lg:row-span-2 bg-white rounded-3xl overflow-hidden shadow-sm lg:h-[524px]">
               <div className="h-full w-full flex items-center justify-center p-8">
@@ -76,53 +76,57 @@ export default function Portfolio() {
               </div>
             </div>
             <div className="bg-[#f9c74f] rounded-3xl overflow-hidden shadow-sm h-full">
-              <div className="h-full w-full flex items-center justify-center p-8">
-                <img
-                  src="/placeholder.svg"
-                  alt="Bee logo"
-                  width={150}
-                  height={150}
-                  className="object-contain"
-                />
+              <div className="h-full w-full">
+                <a
+                  href="https://uncle-taha.github.io/weatherly/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/pages/portfolioImg/weatherly.png"
+                    alt="Bee logo"
+                    className="h-full w-full object-cover cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out"
+                  />
+                </a>
               </div>
             </div>
-            <div className="bg-white rounded-3xl overflow-hidden shadow-sm h-full">
-              <div className="h-full w-full flex items-center justify-center p-8">
-                <img
-                  src="/placeholder.svg"
-                  alt="AEOΛOS logo"
-                  width={150}
-                  height={150}
-                  className="object-contain"
-                />
+
+            <div className="bg-white rounded-3xl overflow-hidden shadow-sm h-full lg:row-span-2">
+              <div className="h-full w-full">
+                <a
+                  href="https://qr-code-generator-chi-nine.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/pages/portfolioImg/qrcodegenerator.png"
+                    alt="AEOΛOS logo"
+                    className="h-full w-full object-contain cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out"
+                  />
+                </a>
               </div>
             </div>
-            <div className="bg-black rounded-3xl overflow-hidden shadow-sm h-full">
-              <div className="h-full w-full flex items-center justify-center p-8">
-                <img
-                  src="/placeholder.svg"
-                  alt="Geometric logo"
-                  width={150}
-                  height={150}
-                  className="object-contain invert"
-                />
-              </div>
-            </div>
-            <div className="bg-white rounded-3xl overflow-hidden shadow-sm h-full">
-              <div className="h-full w-full flex items-center justify-center p-8">
-                <img
-                  src="/placeholder.svg"
-                  alt="Blue bird logo"
-                  width={150}
-                  height={150}
-                  className="object-contain"
-                />
+            <div className="bg-white rounded-3xl overflow-hidden shadow-sm h-full md:col-span-2 lg:col-span-1">
+              <div className="h-full w-full ">
+                <a
+                  href="https://flying-pan.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/pages/portfolioImg/flypan.png"
+                    alt="Geometric logo"
+                    width={150}
+                    height={150}
+                    className="h-full w-full object-contain cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out"
+                  />
+                </a>
               </div>
             </div>
           </div>
         )}
 
-        {activeTab === "Websites" && (
+        {activeTab === "Logos" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:h-[524px]">
             <div className="bg-white rounded-3xl overflow-hidden shadow-sm ">
               <div className="h-full w-full flex items-center justify-center p-8">
