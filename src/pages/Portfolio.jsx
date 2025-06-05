@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState("Logos");
+  const [activeTab, setActiveTab] = useState("Design");
   const [modal, setModal] = useState({
     open: false,
     src: "",
@@ -11,7 +11,7 @@ export default function Portfolio() {
   });
 
   const [likesMap, setLikesMap] = useState({});
-  const tabs = ["Websites", "Logos", "My Gallery"];
+  const tabs = ["Websites", "Design", "My Gallery"];
 
   const openModal = (src, alt, title, key) => {
     setModal({
@@ -83,7 +83,7 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="src/pages/portfolioImg/weatherly.png"
+                    src="/portfolioImg/weatherly.png"
                     alt="Bee logo"
                     className="h-full w-full object-cover cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out"
                   />
@@ -99,7 +99,7 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="src/pages/portfolioImg/qrcodegenerator.png"
+                    src="/portfolioImg/qrcodegenerator.png"
                     alt="AEOΛOS logo"
                     className="h-full w-full object-contain cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out"
                   />
@@ -114,7 +114,7 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="src/pages/portfolioImg/flypan.png"
+                    src="/portfolioImg/flypan.png"
                     alt="Geometric logo"
                     width={150}
                     height={150}
@@ -126,49 +126,50 @@ export default function Portfolio() {
           </div>
         )}
 
-        {activeTab === "Logos" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:h-[524px]">
-            <div className="bg-white rounded-3xl overflow-hidden shadow-sm ">
-              <div className="h-full w-full flex items-center justify-center p-8">
+        {activeTab === "Design" && (
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:h-[524px]
+          "
+          >
+            <div
+              className="bg-white rounded-3xl overflow-hidden  cursor-pointer
+              border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              onClick={() => openModal("/portfolioImg/design1.jpg")}
+            >
+              <div className="h-full w-full flex items-center justify-center ">
+                <img src="/portfolioImg/design1.jpg" />
+              </div>
+            </div>
+            <div
+              className="bg-[#f9c74f] rounded-3xl overflow-hidden shadow-sm h-full cursor-pointer 
+              border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              onClick={() => openModal("/portfolioImg/design2.jpg")}
+            >
+              <div className="h-full w-full flex  ">
                 <img
-                  src="/placeholder.svg"
-                  alt="MNK Beauty World logo"
-                  width={300}
-                  height={300}
-                  className="object-contain "
+                  src="/portfolioImg/design2.jpg"
+                  className="object-cover "
                 />
               </div>
             </div>
-            <div className="bg-[#f9c74f] rounded-3xl overflow-hidden shadow-sm h-full">
-              <div className="h-full w-full flex items-center justify-center p-8">
-                <img
-                  src="/placeholder.svg"
-                  alt="Bee logo"
-                  width={300}
-                  height={300}
-                  className="object-contain"
-                />
+            <div
+              className="bg-white rounded-3xl overflow-hidden shadow-sm h-full cursor-pointer
+              border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              onClick={() => openModal("/portfolioImg/design3.jpg")}
+            >
+              <div className="h-full w-full flex  ">
+                <img src="/portfolioImg/design3.jpg" className="object-cover" />
               </div>
             </div>
-            <div className="bg-white rounded-3xl overflow-hidden shadow-sm h-full">
-              <div className="h-full w-full flex items-center justify-center p-8">
+            <div
+              className="bg-black rounded-3xl overflow-hidden shadow-sm h-full cursor-pointer
+              border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              onClick={() => openModal("/portfolioImg/design4.png")}
+            >
+              <div className="h-full w-full flex  ">
                 <img
-                  src="/placeholder.svg"
-                  alt="AEOΛOS logo"
-                  width={300}
-                  height={300}
-                  className="object-contain"
-                />
-              </div>
-            </div>
-            <div className="bg-black rounded-3xl overflow-hidden shadow-sm h-full">
-              <div className="h-full w-full flex items-center justify-center p-8">
-                <img
-                  src="/placeholder.svg"
-                  alt="Geometric logo"
-                  width={300}
-                  height={300}
-                  className="object-contain invert"
+                  src="/portfolioImg/design4.png"
+                  className="object-cover "
                 />
               </div>
             </div>
@@ -183,7 +184,7 @@ export default function Portfolio() {
                           border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "src/pages/portfolioImg/comeon.JPG",
+                    "/portfolioImg/comeon.JPG",
                     `Title: ${"\u00a0".repeat(10)}"You are so annoying Noona!"`,
                     `Name:  ${"\u00a0".repeat(2)}"Come On Bruh!"`,
                     "Come On"
@@ -197,7 +198,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center">
                   <img
-                    src="src/pages/portfolioImg/comeon.JPG"
+                    src="/portfolioImg/comeon.JPG"
                     alt="You are so annoying Noona!"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -209,7 +210,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "src/pages/portfolioImg/lovely.JPG",
+                    "/portfolioImg/lovely.JPG",
                     `Title: ${"\u00a0".repeat(
                       10
                     )}"Pretending you are not taking my pic"`,
@@ -224,7 +225,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="src/pages/portfolioImg/lovely.JPG"
+                    src="/portfolioImg/lovely.JPG"
                     alt="Pretending you are not taking my pic"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -236,7 +237,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "src/pages/portfolioImg/frog.JPG",
+                    "/portfolioImg/frog.JPG",
                     `Title: ${"\u00a0".repeat(
                       10
                     )}"Someone tell this Sun to shine at night"`,
@@ -252,7 +253,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="src/pages/portfolioImg/frog.JPG"
+                    src="/portfolioImg/frog.JPG"
                     alt="Someone tell this Sun to shine at night"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -264,7 +265,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "src/pages/portfolioImg/canihavesome.JPG",
+                    "/portfolioImg/canihavesome.JPG",
                     `Title: ${"\u00a0".repeat(
                       1
                     )}"You made it for me, right? Noona"`,
@@ -280,7 +281,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="src/pages/portfolioImg/canihavesome.JPG"
+                    src="/portfolioImg/canihavesome.JPG"
                     alt="You made it for me, right? Noona"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -292,7 +293,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "src/pages/portfolioImg/apocalipse.JPG",
+                    "/portfolioImg/apocalipse.JPG",
                     `Title: ${"\u00a0".repeat(
                       1
                     )}"Apocalypse is here, I might starve to death"`,
@@ -308,7 +309,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="src/pages/portfolioImg/apocalipse.JPG"
+                    src="/portfolioImg/apocalipse.JPG"
                     alt="Apocalypse is here, I might starve to death"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -319,7 +320,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "src/pages/portfolioImg/puma.JPG",
+                    "/portfolioImg/puma.JPG",
                     `Title: ${"\u00a0".repeat(1)}"Where is my PUMA deal?"`,
                     `Name:  ${"\u00a0".repeat(2)}"Pawma"`,
                     "Pawma"
@@ -331,58 +332,72 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="src/pages/portfolioImg/puma.JPG"
+                    src="/portfolioImg/puma.JPG"
                     alt="Where is my PUMA deal?"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center "
                   />
                 </div>
               </div>
             </div>
-
-            {modal.open && (
-              <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-white/63 backdrop-blur-[30px]"
-                onClick={() => setModal({ ...modal, open: false })}
-              >
-                <div
-                  className=" bg-white rounded-3xl p-2  w-auto text-center relative max-h-[700px] mx-auto  border-[1px] border-gray-400 dark:text-black"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <div className="absolute top-10 right-10">
-                    <button
-                      className="absolute top-2 right-2 text-2xl font-bold text-white cursor-pointer"
-                      onClick={() => setModal({ ...modal, open: false })}
-                    >
-                      ✕
-                    </button>
-                  </div>
-
-                  <img
-                    src={modal.src}
-                    alt={modal.alt}
-                    className="w-full h-auto object-contain mb-4 rounded-xl max-h-[600px]  "
-                  />
-                  <div className="absolute top-10 left-10">
-                    <button
-                      className="bg-purple-500 text-white px-4 py-2 rounded-full cursor-pointer"
-                      onClick={handleLike}
-                    >
-                      🤍 (
-                      {(hardcodedLikes[modal.key] || 0) +
-                        (likesMap[modal.key] || 0)}
-                      )
-                    </button>
-                  </div>
-                  <div className="text-left relative pl-4 ">
-                    <h2 className=" text-2xl font-bold ">{modal.title}</h2>
-                    <p className="text-lg text-gray-700 mb-6">{modal.alt}</p>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         )}
       </div>
+      {modal.open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white/63 backdrop-blur-[30px] cursor-pointer "
+          onClick={() => setModal({ ...modal, open: false })}
+        >
+          <div
+            className={`bg-white rounded-3xl p-4 relative max-w-full max-h-full mx-auto border border-gray-300 dark:text-black 
+        ${
+          activeTab === "Design"
+            ? "max-w-[90vw] max-h-[80vh] overflow-auto mt-[190px] mb-[50px]"
+            : "max-w-[70vw] max-h-[50vh]"
+        }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="absolute top-10 right-10">
+              <button
+                className={`absolute top-2 right-2 text-2xl font-bold cursor-pointer ${
+                  activeTab === "Design"
+                    ? "text-red-500 -top-2 -right-2"
+                    : "text-white"
+                }`}
+                onClick={() => setModal({ ...modal, open: false })}
+              >
+                ✕
+              </button>
+            </div>
+
+            <img
+              src={modal.src}
+              alt={modal.alt}
+              className={`w-full object-contain mb-4 rounded-xl ${
+                activeTab === "Design"
+                  ? "max-h-[1600px] max-w-[1200px] "
+                  : "max-h-[600px]"
+              }`}
+            />
+            {activeTab !== "Design" && (
+              <div className="absolute top-10 left-10">
+                <button
+                  className="bg-purple-500 text-white px-4 py-2 rounded-full cursor-pointer"
+                  onClick={handleLike}
+                >
+                  🤍 (
+                  {(hardcodedLikes[modal.key] || 0) +
+                    (likesMap[modal.key] || 0)}
+                  )
+                </button>
+              </div>
+            )}
+            <div className="text-left relative pl-4 ">
+              <h2 className=" text-2xl font-bold ">{modal.title}</h2>
+              <p className="text-lg text-gray-700 mb-6">{modal.alt}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
