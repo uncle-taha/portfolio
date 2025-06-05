@@ -65,3 +65,10 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+/* baemin font */
+@font-face {
+  font-family: "BaeminHannaPro";
+  src: url("./assets/fonts/BMHANNAPro.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

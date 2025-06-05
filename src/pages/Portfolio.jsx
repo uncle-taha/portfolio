@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("Design");
@@ -64,7 +65,10 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto">
         {activeTab === "Websites" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="col-span-full lg:col-span-2 lg:row-span-2 bg-white rounded-3xl overflow-hidden shadow-sm lg:h-[524px]">
+            <Link
+              to="/portfolio/baemin"
+              className="col-span-full lg:col-span-2 lg:row-span-2 bg-white rounded-3xl overflow-hidden shadow-sm lg:h-[524px] cursor-pointer"
+            >
               <div className="h-full w-full flex items-center justify-center p-8">
                 <img
                   src="/placeholder.svg"
@@ -74,7 +78,7 @@ export default function Portfolio() {
                   className="object-contain"
                 />
               </div>
-            </div>
+            </Link>
             <div className="bg-[#f9c74f] rounded-3xl overflow-hidden shadow-sm h-full">
               <div className="h-full w-full">
                 <a
