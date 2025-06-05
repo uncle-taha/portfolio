@@ -115,7 +115,15 @@ export default function Contact() {
             <div className="space-y-6">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-4" />
-                <span>taxa.king95@mail.ru</span>
+                <a
+                  href="mailto:taxa.king@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="text-white underline cursor-pointer">
+                    taxa.king@gmail.com
+                  </span>
+                </a>
               </div>
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 mr-4" />
