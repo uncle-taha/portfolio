@@ -69,13 +69,11 @@ export default function Portfolio() {
               to="/portfolio/baemin"
               className="col-span-full lg:col-span-2 lg:row-span-2 bg-white rounded-3xl overflow-hidden shadow-sm lg:h-[524px] cursor-pointer"
             >
-              <div className="h-full w-full flex items-center justify-center p-8">
+              <div className="h-full w-full flex  ">
                 <img
-                  src="/placeholder.svg"
+                  src="/portfolioImg/baeminenglish.png"
                   alt="MNK Beauty World logo"
-                  width={300}
-                  height={300}
-                  className="object-contain"
+                  className="object-cover hover:scale-110 hover:object-center duration-500 ease-in-out"
                 />
               </div>
             </Link>
