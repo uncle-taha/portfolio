@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState("Design");
+  const [activeTab, setActiveTab] = useState("Websites");
   const [modal, setModal] = useState({
     open: false,
     src: "",
