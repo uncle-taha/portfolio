@@ -2,6 +2,7 @@ import "./RecentWork.css";
 import { CircleArrowUp } from "lucide-react";
 import Title from "../components/Title";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function RecentWork() {
   return (
@@ -19,7 +20,9 @@ function RecentWork() {
       >
         <div className="container-div  dark:bg-gray-900">
           <div className="div-1 rounded-3xl object-cover dark:bg-gray-900 "></div>
-          <div class="div-2 cursor-pointer "></div>
+          <Link to="/portfolio/baemin">
+            <div class="div-2 cursor-pointer "></div>
+          </Link>
           <div class="div-3 "></div>
           <div class="div-4 "></div>
           <div class="div-7 "></div>
@@ -29,20 +32,36 @@ function RecentWork() {
           <div class="div-9 cursor-pointer"></div>
           <div class="div-10 "></div>
           <div class="div-11 ">
-            <CircleArrowUp className="rotate-45 h-11 w-11 cursor-pointer hover:text-green-600 transition-transform duration-200 hover:rotate-90 " />
+            <Link to="/portfolio/baemin">
+              <CircleArrowUp className="rotate-45 h-11 w-11 cursor-pointer hover:text-green-600 transition-transform duration-200 hover:rotate-90 " />
+            </Link>
           </div>
           <div class="div-12 "></div>
           <div class="div-13 "></div>
           <div class="div-14  ">
-            <CircleArrowUp className="rotate-45 h-11 w-11 cursor-pointer hover:text-green-600 transition-transform duration-200 hover:rotate-90" />
+            <a
+              href="https://flying-pan.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CircleArrowUp className="rotate-45 h-11 w-11 cursor-pointer hover:text-green-600 transition-transform duration-200 hover:rotate-90" />
+            </a>
           </div>
           <div class="div-15 ">
-            <CircleArrowUp className="rotate-45 h-11 w-11 cursor-pointer hover:text-green-600 transition-transform duration-200 hover:rotate-90" />
+            <a
+              href="https://qr-code-generator-chi-nine.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CircleArrowUp className="rotate-45 h-11 w-11 cursor-pointer hover:text-green-600 transition-transform duration-200 hover:rotate-90" />
+            </a>
           </div>
           <div class="div-16 "></div>
           <div class="div-17 "></div>
           <div class="div-18 ">
-            <CircleArrowUp className="rotate-45 h-11 w-11 cursor-pointer hover:text-green-600 transition-transform duration-200 hover:rotate-90" />
+            <Link to="/portfolio">
+              <CircleArrowUp className="rotate-45 h-11 w-11 cursor-pointer hover:text-green-600 transition-transform duration-200 hover:rotate-90" />
+            </Link>
           </div>
           <div class="div-19 "></div>
           <div class="div-20 "></div>
