@@ -59,7 +59,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
-              className="text-2xl sm:text-4xl md:text-[64px] font-bold mb-4 leading-tight dark:text-black"
+              className="text-6xl sm:text-4xl md:text-[64px] font-bold mb-4 leading-tight dark:text-black"
             >
               Igniting <br />
               Ideas <br />
