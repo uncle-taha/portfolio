@@ -5,7 +5,7 @@ import Visa from "./blogImages/visa.png";
 import Apple from "./blogImages/applepay.png";
 import Master from "./blogImages/master.png";
 import Paypal from "./blogImages/paypal.png";
-import Chokko1 from "./blogImages/Chokko1.png";
+import Chokko1 from "./blogImages/chokko1.png";
 
 const ShoppingCart = () => {
   const [quantity, setQuantity] = useState(1);
