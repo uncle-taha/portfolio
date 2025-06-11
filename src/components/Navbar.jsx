@@ -111,26 +111,51 @@ function Navbar({ children, darkMode, toggleDarkMode }) {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <>
-          <div className="fixed top-16 w-full h-full bg-[#dfe4f2]/100 blur-sm"></div>
+          <div
+            className="fixed top-16 w-full h-full bg-[#dfe4f2]/100 blur-sm
+          border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border dark:text-white z-50"
+            onClick={() => setIsMenuOpen(false)}
+          ></div>
           <ul
             className="flex flex-col justify-center items-center gap-8 bg-white m-6 p-8 text-lg 
-            rounded-[10px] z-50 fixed top-10 left-0 right-0 cursor-pointer md:hidden"
+            rounded-[10px] z-50 fixed top-10 left-0 right-0 cursor-pointer md:hidden
+            border-white/80 dark:bg-white/60 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border dark:text-black"
           >
-            <li className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center">
-              Home
-            </li>
-            <li className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center">
-              About
-            </li>
-            <li className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center">
-              Portfolio
-            </li>
-            <li className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center">
-              Services
-            </li>
-            <li className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center ">
-              Contact
-            </li>
+            <Link
+              to="/"
+              className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <li>Home</li>
+            </Link>
+            <Link
+              to="/about"
+              className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <li>About</li>
+            </Link>
+            <Link
+              to="/portfolio"
+              className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <li>Portfolio</li>
+            </Link>
+            <Link
+              to="/blogpage"
+              className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <li>Blog</li>
+            </Link>
+            <Link
+              to="/contact"
+              className="w-full py-2 rounded-2xl hover:bg-[#dfe4f2] text-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <li>Contact</li>
+            </Link>
           </ul>
         </>
       )}
