@@ -47,7 +47,7 @@ export default function About() {
           <motion.img
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             src={abougBg}
             alt=""
@@ -57,7 +57,7 @@ export default function About() {
             <motion.h1
               initial={{ opacity: 0, scale: 0.8, x: -75 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="text-4xl font-bold mb-4 leading-tight text-[64px] dark:text-black"
             >
@@ -68,7 +68,7 @@ export default function About() {
             <motion.p
               initial={{ opacity: 0, scale: 0.9, x: 95 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="hidden md:block text-lg text-white font-semibold "
             >
@@ -96,7 +96,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
           className="mx-15 my-10"
         >
@@ -107,7 +107,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8, x: -75 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="flex-1 min-w-[280px] rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20"
             >
@@ -124,7 +124,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="flex-1 min-w-[280px] rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20"
             >
@@ -141,7 +141,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8, x: 75 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="flex-1 min-w-[280px] rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:bg-white/20"
             >
@@ -160,7 +160,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
           className="mx-15 my-10"
         >
@@ -174,7 +174,7 @@ export default function About() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, x: -75 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.4 }}
                 viewport={{ once: true }}
                 className="bg-gray-50 p-6 rounded-lg dark:bg-white/20 dark:text-white border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
               >
@@ -207,7 +207,7 @@ export default function About() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, x: 75 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.4 }}
                 viewport={{ once: true }}
                 className="bg-gray-50 p-6 rounded-lg dark:bg-white/20 dark:text-white border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
               >
@@ -239,7 +239,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
           className="mx-15 my-10"
         >
@@ -250,7 +250,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             className="my-20 mx-3"
           >

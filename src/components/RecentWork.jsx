@@ -27,9 +27,23 @@ function RecentWork() {
           <div class="div-4 "></div>
           <div class="div-7 "></div>
           <div class="div-5 "></div>
-          <div class="div-6 cursor-pointer"></div>
-          <div class="div-8 cursor-pointer "></div>
-          <div class="div-9 cursor-pointer"></div>
+          <a
+            href="https://flying-pan.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="div-6 cursor-pointer"></div>
+          </a>
+          <a
+            href="https://qr-code-generator-chi-nine.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="div-8 cursor-pointer "></div>
+          </a>
+          <Link to="/portfolio/">
+            <div class="div-9 cursor-pointer"></div>
+          </Link>
           <div class="div-10 "></div>
           <div class="div-11 ">
             <Link to="/portfolio/baemin">

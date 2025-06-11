@@ -71,7 +71,6 @@ function Footer({ darkMode }) {
                     { name: "Telegram", link: "https://t.me/topchikimbu" },
                     {
                       name: "Instagram",
-                      link: "https://www.instagram.com/your_username",
                     },
                   ].map(({ name, link }) => (
                     <li key={name}>
