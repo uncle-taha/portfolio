@@ -1,12 +1,14 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
-import ErrorPage from "./pages/ErrorPage";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Portfolio from "./pages/Portfolio";
-import BlogPage from "./pages/BlogPage";
-import Baemin from "./pages/Baemin";
+import Spinner from "../src/components/Spinner";
+const ErrorPage = lazy(() => import("./pages/ErrorPage"));
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+const Baemin = lazy(() => import("./pages/Baemin"));
 function App() {
   const routes = createBrowserRouter([
     // prettier-ignore
@@ -38,7 +40,11 @@ function App() {
         },
       ] },
   ]);
-  return <RouterProvider router={routes} />;
+  return (
+    <Suspense fallback={<Spinner />}>
+      <RouterProvider router={routes} />
+    </Suspense>
+  );
 }
 
 export default App;
