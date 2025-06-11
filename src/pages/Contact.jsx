@@ -1,6 +1,6 @@
 "use client";
 const secretKey = import.meta.env.VITE_SECRET_KEY;
-const siteKey = import.meta.env.VITE_SITE_KEY;
+
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const publicKey = import.meta.env.VITE_PUBLIC_KEY;
@@ -233,12 +233,6 @@ export default function Contact() {
                   </span>{" "}
                   to your inquiry.
                 </label>
-              </div>
-              <div className="flex justify-center cursor-pointer">
-                <ReCAPTCHA
-                  sitekey={siteKey}
-                  onChange={(token) => setCaptchaToken(token)}
-                />
               </div>
 
               <button
