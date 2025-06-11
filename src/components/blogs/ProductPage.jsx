@@ -6,7 +6,7 @@ const products = [
     id: 1,
     name: "AirPods 4",
     subtitle: "액티브 노이즈 캔슬링 모델",
-    image: "src/components/blogs/blogImages/airpods-4.jpeg",
+    image: "/portfolioImg/airpods-4.jpeg",
     price: 269000,
     colors: [{ name: "White", value: "#ffffff" }],
     tag: "무료 각인",
@@ -14,7 +14,7 @@ const products = [
   {
     id: 2,
     name: "AirPods Pro 2",
-    image: "src/components/blogs/blogImages/airpods-pro-2.jpeg",
+    image: "/portfolioImg/airpods-pro-2.jpeg",
     price: 349000,
     colors: [{ name: "White", value: "#ffffff" }],
     tag: "무료 각인",
@@ -23,7 +23,7 @@ const products = [
     id: 3,
     name: "Powerbeats Pro 2",
     subtitle: "고성능 이어버드 — 일렉트릭 오렌지",
-    image: "src/components/blogs/blogImages/MX743.jpeg",
+    image: "/portfolioImg/MX743.jpeg",
     price: 369000,
     colors: [
       { name: "Black", value: "#000000" },
@@ -37,7 +37,7 @@ const products = [
     id: 4,
     name: "AirPods Max",
     subtitle: "미드나이트",
-    image: "src/components/blogs/blogImages/airpods-max.jpeg",
+    image: "/portfolioImg/airpods-max.jpeg",
     price: 769000,
     colors: [
       { name: "Space Gray", value: "#333333" },
@@ -52,7 +52,7 @@ const products = [
     id: 5,
     name: "Beats Solo 4",
     subtitle: "온이어 Wireless 헤드폰 — 클라우드 핑크",
-    image: "src/components/blogs/blogImages/Beats-solo.jpeg",
+    image: "/portfolioImg/Beats-solo.jpeg",
     price: 269000,
     colors: [
       { name: "Black", value: "#000000" },
@@ -64,7 +64,7 @@ const products = [
     id: 6,
     name: "Beats Studio Pro",
     subtitle: "스페이스 그레이",
-    image: "src/components/blogs/blogImages/breats-studio.jpeg",
+    image: "/portfolioImg/breats-studio.jpeg",
     price: 219000,
     colors: [{ name: "Space Gray", value: "#333333" }],
   },
