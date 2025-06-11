@@ -6,7 +6,7 @@ function Title({ title, paragraph, className = "" }) {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className={`flex flex-col items-center justify-center  px-6 pb-18 sm:px-0 text-center space-y-4 ${className}`}
+      className={`flex flex-col items-center justify-center  px-6 pb-18 sm:px-0 text-center space-y-4 will-change-transform ${className}`}
     >
       <div
         className="w-24 h-1 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400"

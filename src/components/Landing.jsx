@@ -22,7 +22,7 @@ function Landing() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="animated-shape hidden md:block absolute inset-0 z-0 w-full h-full overflow-visible  "
+            className="animated-shape hidden md:block absolute inset-0 z-0 w-full h-full overflow-visible  will-change-transform"
           >
             <AnimatedShape
               className="absolute w-[120%] h-[120%] -left-10 -top-10 lg:w-[160%] lg:h-[210%] lg:-left-0 lg:-top-70 
@@ -35,7 +35,7 @@ function Landing() {
             alt="Portfolio"
             className="relative z-10 rounded-full h-[400px] w-full max-w-[350px] object-cover pointer-events-none 
                         md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-8
-            [@media(max-width:1280px)]:right-[6px] 
+            [@media(max-width:1280px)]:right-[6px] will-change-transform
             "
             initial={{ opacity: 0, scale: 0.9, y: -100, x: 50 }}
             whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
@@ -49,7 +49,7 @@ function Landing() {
           whileInView={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 text-stack"
+          className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 text-stack will-change-transform"
         >
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-primary">
             Hello!

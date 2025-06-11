@@ -16,7 +16,7 @@ function RecentWork() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="parent-div   "
+        className="parent-div  will-change-transform "
       >
         <div className="container-div  dark:bg-gray-900">
           <div className="div-1 rounded-3xl object-cover dark:bg-gray-900 "></div>

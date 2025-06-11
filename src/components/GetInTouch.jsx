@@ -10,7 +10,7 @@ export default function HeroSection() {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="w-full max-w-6xl mx-auto px-10 pb-20 pt-16 md:px-10 lg:px-0"
+      className="w-full max-w-6xl mx-auto px-10 pb-20 pt-16 md:px-10 lg:px-0 will-change-transform"
     >
       <Title
         title="Let’s build something cool"

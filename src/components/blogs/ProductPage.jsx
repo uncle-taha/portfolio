@@ -219,7 +219,7 @@ function ProductCard({ product }) {
     <div className="min-w-[250px] bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex-shrink-0  ">
       <div className="relative pt-[100%] mb-4 ">
         <img
-          src={product.image || "/placeholder.svg"}
+          src={product.image || "?"}
           alt={product.name}
           className="absolute inset-0 w-full h-full object-contain p-4"
         />

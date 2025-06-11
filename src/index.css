@@ -1,3 +1,6 @@
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
@@ -14,6 +17,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background-color: #dfe4f2;
   color: #14121a;
 }

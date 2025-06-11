@@ -20,7 +20,7 @@ function SmallScreens() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className=" flex items-center justify-center px-4 py-2 md:px-10 mb-10 "
+        className=" flex items-center justify-center px-4 py-2 md:px-10 mb-10 will-change-transform"
       >
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:grid-cols-2 sm:gap-6 w-full max-w-6xl bg-white p-10 rounded-3xl dark:bg-gray-900 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] dark:border">
           {/* Top left */}

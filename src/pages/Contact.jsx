@@ -8,7 +8,6 @@ const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 import { useState } from "react";
 import { Mail, MapPin, Clock } from "lucide-react";
 import emailjs from "emailjs-com";
-import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -150,6 +149,7 @@ export default function Contact() {
                     type="text"
                     id="firstName"
                     name="firstName"
+                    autoComplete="given-name"
                     value={formData.firstName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white 
@@ -168,6 +168,7 @@ export default function Contact() {
                     type="text"
                     id="lastName"
                     name="lastName"
+                    autoComplete="family-name"
                     value={formData.lastName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 dark:bg-[#14121a] dark:focus:bg-[#14121a]"
@@ -186,6 +187,7 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
+                  autoComplete="email"
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 dark:bg-[#14121a] dark:focus:bg-[#14121a]"

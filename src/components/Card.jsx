@@ -24,7 +24,7 @@ export default function Card({
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className={`flex items-center justify-center px-4 sm:px-10  dark:bg-[#14121a] pb-18 ${
+      className={`flex items-center justify-center px-4 sm:px-10  dark:bg-[#14121a] pb-18 will-change-transform ${
         darkMode
           ? "bg-[#14121a] text-white"
           : "bg-[#dfe4f2] text-black overflow-x-hidden"
