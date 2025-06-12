@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
 import Spinner from "../src/components/Spinner";
+import useViewportHeight from "./hooks/useViewportHeight";
 const ErrorPage = lazy(() => import("./pages/ErrorPage"));
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -9,7 +10,10 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const Baemin = lazy(() => import("./pages/Baemin"));
+
 function App() {
+  useViewportHeight();
+
   const routes = createBrowserRouter([
     // prettier-ignore
     { path: "/", 

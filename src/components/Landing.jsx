@@ -11,7 +11,12 @@ import backgroundImg from "/portfolioImg/background.png";
 
 function Landing() {
   return (
-    <div className="relative z-0 min-h-screen w-full bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
+    <div
+      className="relative z-0 min-h-[calc(var(--vh,1vh)*100)] w-full bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]"
+      style={{
+        minHeight: "calc(var(--vh, 1vh) * 100)", // Fallback in case CSS doesn't apply
+      }}
+    >
       <div className="absolute inset-0 z-0 -top-80 -left-80 md:-top-40 md:-left-60">
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
