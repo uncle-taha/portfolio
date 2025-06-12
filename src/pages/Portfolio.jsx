@@ -186,7 +186,7 @@ export default function Portfolio() {
                           border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "public/portfolioImg/comeon.jpg",
+                    "/portfolioImg/comeon.jpg",
                     `Title: ${"\u00a0".repeat(10)}"You are so annoying Noona!"`,
                     `Name:  ${"\u00a0".repeat(2)}"Come On Bruh!"`,
                     "Come On"
@@ -200,7 +200,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center">
                   <img
-                    src="public/portfolioImg/comeon.jpg"
+                    src="/portfolioImg/comeon.jpg"
                     alt="You are so annoying Noona!"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -212,7 +212,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "public/portfolioImg/lovely.jpg",
+                    "/portfolioImg/lovely.jpg",
                     `Title: ${"\u00a0".repeat(
                       10
                     )}"Pretending you are not taking my pic"`,
@@ -227,7 +227,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="public/portfolioImg/lovely.jpg"
+                    src="/portfolioImg/lovely.jpg"
                     alt="Pretending you are not taking my pic"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -239,7 +239,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "public/portfolioImg/frog.jpg",
+                    "/portfolioImg/frog.jpg",
                     `Title: ${"\u00a0".repeat(
                       10
                     )}"Someone tell this Sun to shine at night"`,
@@ -255,7 +255,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="public/portfolioImg/frog.jpg"
+                    src="/portfolioImg/frog.jpg"
                     alt="Someone tell this Sun to shine at night"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -267,7 +267,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "public/portfolioImg/canihavesome.jpg",
+                    "/portfolioImg/canihavesome.jpg",
                     `Title: ${"\u00a0".repeat(
                       1
                     )}"You made it for me, right? Noona"`,
@@ -283,7 +283,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="public/portfolioImg/canihavesome.jpg"
+                    src="/portfolioImg/canihavesome.jpg"
                     alt="You made it for me, right? Noona"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -295,7 +295,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "public/portfolioImg/apocalipse.jpg",
+                    "/portfolioImg/apocalipse.jpg",
                     `Title: ${"\u00a0".repeat(
                       1
                     )}"Apocalypse is here, I might starve to death"`,
@@ -311,7 +311,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="public/portfolioImg/apocalipse.jpg"
+                    src="/portfolioImg/apocalipse.jpg"
                     alt="Apocalypse is here, I might starve to death"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
                   />
@@ -322,7 +322,7 @@ export default function Portfolio() {
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
-                    "public/portfolioImg/puma.jpg",
+                    "/portfolioImg/puma.jpg",
                     `Title: ${"\u00a0".repeat(1)}"Where is my PUMA deal?"`,
                     `Name:  ${"\u00a0".repeat(2)}"Pawma"`,
                     "Pawma"
@@ -334,7 +334,7 @@ export default function Portfolio() {
                 </div>
                 <div className="h-full w-full flex items-center justify-center ">
                   <img
-                    src="public/portfolioImg/puma.jpg"
+                    src="/portfolioImg/puma.jpg"
                     alt="Where is my PUMA deal?"
                     className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center "
                   />

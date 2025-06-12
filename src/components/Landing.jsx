@@ -17,7 +17,7 @@ function Landing() {
         minHeight: "calc(var(--vh, 1vh) * 100)", // Fallback in case CSS doesn't apply
       }}
     >
-      <div className="absolute inset-0 z-0 -top-80 -left-80 md:-top-40 md:-left-60">
+      <div className="absolute inset-0 z-0 -top-80 -left-80 md:-top-40 md:-left-60 hidden sm:block">
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
       </div>
@@ -30,7 +30,7 @@ function Landing() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="absolute  scale-250 z-0 left-38 -top-48 md:left-44 md:-top-48 lg:left-44 lg:-top-64 cursor-pointer"
+              className="absolute scale-210 md:scale-250 z-0 left-32 -top-34 md:left-44 md:-top-48 lg:left-44 lg:-top-64 cursor-pointer"
             />
             <motion.img
               src={portfolioImg}
