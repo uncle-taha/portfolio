@@ -1,4 +1,4 @@
-import AnimatedShape from "../components/AnimatedShape";
+// import AnimatedShape from "../components/AnimatedShape";
 import Button from "../components/Button";
 import { MoveRight } from "lucide-react";
 import { FaTelegram, FaLinkedin, FaGithub } from "react-icons/fa";
@@ -7,41 +7,38 @@ import { motion } from "framer-motion";
 import "./Landing.css";
 import FloatingPaths from "./Floatingpaths";
 import { Link } from "react-router-dom";
+import backgroundImg from "/portfolioImg/background.png";
 
 function Landing() {
   return (
     <div className="relative z-0 min-h-screen w-full bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 -top-80 -left-80 md:-top-40 md:-left-60">
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto px-4 sm:px-8 gap-12 lg:gap-24 stack-on-small">
-        <div className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2 ">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: -100 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="animated-shape hidden md:block absolute inset-0 z-0 w-full h-full overflow-visible  will-change-transform"
-          >
-            <AnimatedShape
-              className="absolute w-[120%] h-[120%] -left-10 -top-10 lg:w-[160%] lg:h-[210%] lg:-left-0 lg:-top-70 
-            cursor-pointer lg-only-shape-position md-only-shape-position sm-shape 
-            "
+        <div className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2">
+          <div className="relative">
+            <motion.img
+              src={backgroundImg}
+              initial={{ opacity: 0, scale: 0.9, y: -100 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="absolute  scale-250 z-0 left-38 -top-48 md:left-44 md:-top-48 lg:left-44 lg:-top-64 cursor-pointer"
             />
-          </motion.div>
-          <motion.img
-            src={portfolioImg}
-            alt="Portfolio"
-            className="relative z-10 rounded-full h-[400px] w-full max-w-[350px] object-cover pointer-events-none 
-                        md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-8
-            [@media(max-width:1280px)]:right-[6px] will-change-transform
-            "
-            initial={{ opacity: 0, scale: 0.9, y: -100, x: 50 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          />
+            <motion.img
+              src={portfolioImg}
+              alt="Portfolio"
+              className="relative z-10 rounded-full h-[400px] w-full max-w-[350px] object-cover pointer-events-none 
+                 md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-8
+                 [@media(max-width:1280px)]:right-[6px] will-change-transform"
+              initial={{ opacity: 0, scale: 0.9, y: -100, x: 50 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            />
+          </div>
         </div>
 
         <motion.div
@@ -51,7 +48,7 @@ function Landing() {
           viewport={{ once: true }}
           className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 text-stack will-change-transform"
         >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-primary">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-primary pt-10">
             Hello!
           </h1>
 
@@ -76,7 +73,7 @@ function Landing() {
             Web Developer
           </div>
 
-          <p className="text-base md:text-lg mt-6 max-w-xl lg:max-w-2xl">
+          <p className="text-base md:text-lg mt-6 max-w-xl lg:max-w-2xl px-10">
             I'm a Front-End Web Developer and UI/UX Designer, passionate about
             creating visually stunning and user-friendly digital experiences.
           </p>

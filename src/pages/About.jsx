@@ -59,7 +59,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="text-6xl sm:text-4xl md:text-[64px] font-bold mb-4 leading-tight dark:text-black will-change-transform"
+              className="text-6xl sm:text-5xl md:text-[64px] font-bold mb-4 break-words leading-tight  dark:text-black will-change-transform"
             >
               Igniting <br />
               Ideas <br />
