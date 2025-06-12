@@ -4,7 +4,7 @@ import { MoveRight } from "lucide-react";
 import { FaTelegram, FaLinkedin, FaGithub } from "react-icons/fa";
 import portfolioImg from "../assets/portfolio.svg";
 import { motion } from "framer-motion";
-import "./Landing.css";
+// import "./Landing.css";
 import FloatingPaths from "./Floatingpaths";
 import { Link } from "react-router-dom";
 import backgroundImg from "/portfolioImg/background.png";
@@ -12,7 +12,7 @@ import backgroundImg from "/portfolioImg/background.png";
 function Landing() {
   return (
     <div
-      className="relative z-0 min-h-[calc(var(--vh,1vh)*100)] w-full bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]"
+      className="relative z-0 min-h-[calc(var(--vh,1vh)*100)] w-full overflow-hidden bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]"
       style={{
         minHeight: "calc(var(--vh, 1vh) * 100)", // Fallback in case CSS doesn't apply
       }}
@@ -22,7 +22,7 @@ function Landing() {
         <FloatingPaths position={-1} />
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto px-4 sm:px-8 gap-12 lg:gap-24 stack-on-small">
-        <div className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2">
+        <div className="relative w-full lg:w-1/2 h-full flex items-center justify-center order-1 lg:order-2 max-w-full ">
           <div className="relative">
             <motion.img
               src={backgroundImg}

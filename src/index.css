@@ -23,6 +23,21 @@
     height: 100%;
     height: calc(var(--vh, 1vh) * 100);
   }
+  /* Mobile-only overflow control */
+  @media (max-width: 767px) {
+    html,
+    body {
+      overflow-x: hidden;
+      width: 100vw;
+      position: relative;
+    }
+  }
+  @media (min-width: 767px) {
+    html,
+    body {
+      overflow-x: none;
+    }
+  }
 }
 
 html {
