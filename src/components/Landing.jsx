@@ -50,14 +50,14 @@ function Landing() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="absolute scale-200 md:scale-210 z-0 left-28 -top-34 md:left-48 md:-top-54 lg:left-48 lg:-top-68 cursor-pointer "
+              className="absolute scale-220 md:scale-210 z-0 left-28 -top-32 md:left-50 md:-top-54 lg:left-48 lg:-top-68 cursor-pointer "
             />
             <motion.img
               src={portfolioImg}
               alt="Portfolio"
-              className="relative z-10 rounded-full h-[350px] max-w-[350px] md:h-[500px] w-full md:max-w-[450px] object-cover pointer-events-none 
+              className="relative z-10 rounded-full h-[300px] max-w-[350px] md:h-[500px] w-full md:max-w-[450px] object-cover pointer-events-none 
                  md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-8
-                 [@media(max-width:1280px)]:right-[6px] will-change-transform"
+                  will-change-transform"
               initial={{ opacity: 0, scale: 0.9, y: -100, x: 50 }}
               whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8 }}
