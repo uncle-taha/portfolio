@@ -7,11 +7,6 @@
   --font-primary: "League Spartan", sans-serif;
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
-}
 /* safari */
 @supports (-webkit-touch-callout: none) {
   html,
