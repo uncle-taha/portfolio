@@ -7,16 +7,36 @@ import { motion } from "framer-motion";
 // import "./Landing.css";
 import FloatingPaths from "./Floatingpaths";
 import { Link } from "react-router-dom";
-import backgroundImg from "/portfolioImg/background.png";
+import backgroundImg from "/portfolioImg/background.svg";
+import { useState, useEffect } from "react";
+
+function useDeviceSize() {
+  const [deviceSize, setDeviceSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDeviceSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return deviceSize;
+}
 
 function Landing() {
+  const { width } = useDeviceSize();
+
+  const imageSize = width < 768 ? "small" : width < 1024 ? "medium" : "large";
   return (
-    <div
-      className="relative z-0 min-h-[calc(var(--vh,1vh)*100)] w-full overflow-hidden bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]"
-      style={{
-        minHeight: "calc(var(--vh, 1vh) * 100)", // Fallback in case CSS doesn't apply
-      }}
-    >
+    <div className="relative z-0 min-h-screen w-full overflow-hidden bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
       <div className="absolute inset-0 z-0 -top-80 -left-80 md:-top-40 md:-left-60 hidden sm:block">
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
@@ -30,12 +50,12 @@ function Landing() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="absolute scale-210 md:scale-250 z-0 left-32 -top-34 md:left-44 md:-top-48 lg:left-44 lg:-top-64 cursor-pointer"
+              className="absolute scale-200 md:scale-210 z-0 left-28 -top-34 md:left-48 md:-top-54 lg:left-48 lg:-top-68 cursor-pointer "
             />
             <motion.img
               src={portfolioImg}
               alt="Portfolio"
-              className="relative z-10 rounded-full h-[400px] w-full max-w-[350px] object-cover pointer-events-none 
+              className="relative z-10 rounded-full h-[350px] max-w-[350px] md:h-[500px] w-full md:max-w-[450px] object-cover pointer-events-none 
                  md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-8
                  [@media(max-width:1280px)]:right-[6px] will-change-transform"
               initial={{ opacity: 0, scale: 0.9, y: -100, x: 50 }}
