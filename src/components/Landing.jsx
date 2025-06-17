@@ -2,7 +2,7 @@
 import Button from "../components/Button";
 import { MoveRight } from "lucide-react";
 import { FaTelegram, FaLinkedin, FaGithub } from "react-icons/fa";
-import portfolioImg from "../assets/portfolio.svg";
+import portfolioImg from "../assets/portfolio.png";
 import { motion } from "framer-motion";
 // import "./Landing.css";
 import FloatingPaths from "./Floatingpaths";
@@ -33,7 +33,7 @@ function Landing() {
                 alt="Portfolio"
                 className="relative z-10 rounded-full h-[400px] max-w-[350px] md:h-[500px] w-full md:max-w-[450px] object-cover pointer-events-none 
                  md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-14
-                  will-change-transform"
+                  will-change-transform "
                 initial={{ opacity: 0, scale: 0.9, y: -100, x: 50 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -49,7 +49,7 @@ function Landing() {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 text-stack will-change-transform"
           >
-            <div className="flex flex-col items-center md:items-center sm:items-center lg:items-start md:mt-30">
+            <div className="flex flex-col items-center mt-20 md:items-center sm:items-center lg:items-start md:mt-20">
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-primary pt-10">
                 Hello!
               </h1>
