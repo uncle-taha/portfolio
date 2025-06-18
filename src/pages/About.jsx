@@ -7,6 +7,7 @@ import Listening from "../assets/personal/music.png";
 import Runnig from "../assets/personal/running.png";
 import Chess from "../assets/personal/chess.png";
 import { motion } from "framer-motion";
+import LazyLoadImg from "../components/LazyLoadImg";
 
 export default function About() {
   const categories = [
@@ -44,15 +45,19 @@ export default function About() {
     <>
       <div className="max-w-6xl bg-white h-full flex flex-col justify-center items-center m-auto my-30 rounded-[20px] border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border dark:bg-gray-900 ">
         <div className="relative w-[90%] h-[600px] my-15">
-          <motion.img
+          <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            src={abougBg}
-            alt=""
-            className="w-full h-full object-cover rounded-[20px] border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border will-change-transform"
-          />
+          >
+            <LazyLoadImg
+              link={abougBg}
+              name="Personal photo"
+              className="w-full h-full object-cover rounded-[20px] border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border will-change-transform"
+            />
+          </motion.div>
+
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-start p-10 justify-start md:justify-center md:gap-40">
             <motion.h1
               initial={{ opacity: 0, scale: 0.8, x: -55 }}

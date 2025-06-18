@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import LazyLoadImg from "../components/LazyLoadImg";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("Websites");
@@ -70,40 +71,41 @@ export default function Portfolio() {
               className="col-span-full lg:col-span-2 lg:row-span-2 bg-white rounded-3xl overflow-hidden shadow-sm lg:h-[524px] cursor-pointer"
             >
               <div className="h-full w-full flex  ">
-                <img
-                  src="/portfolioImg/baeminenglish.png"
-                  alt="MNK Beauty World logo"
-                  className="object-cover hover:scale-110 hover:object-center duration-500 ease-in-out"
+                <LazyLoadImg
+                  link="/portfolioImg/baeminenglish.png"
+                  name="Baemin"
+                  className="object-cover hover:scale-110 hover:object-center duration-500 ease-in-out w-full h-full"
                 />
               </div>
             </Link>
-            <div className="bg-[#f9c74f] rounded-3xl overflow-hidden shadow-sm h-full">
+            <div className=" rounded-3xl overflow-hidden shadow-sm h-full">
               <div className="h-full w-full">
                 <a
                   href="https://uncle-taha.github.io/weatherly/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="block h-full w-full"
                 >
-                  <img
-                    src="/portfolioImg/weatherly.png"
-                    alt="Bee logo"
-                    className="h-full w-full object-cover cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out"
+                  <LazyLoadImg
+                    link="/portfolioImg/weatherly.png"
+                    name="Location checker app"
+                    className="object-fit cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out  h-full"
                   />
                 </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl overflow-hidden shadow-sm h-full lg:row-span-2">
+            <div className=" rounded-3xl overflow-hidden shadow-sm h-full lg:row-span-2">
               <div className="h-full w-full">
                 <a
                   href="https://qr-code-generator-chi-nine.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    src="/portfolioImg/qrcodegenerator.png"
-                    alt="AEOΛOS logo"
-                    className="h-full w-full object-contain cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out"
+                  <LazyLoadImg
+                    link="/portfolioImg/qrcodegenerator.png"
+                    name="QR code generator"
+                    className="object-fit hover:scale-110 hover:object-center duration-500 ease-in-out w-full h-full"
                   />
                 </a>
               </div>
@@ -115,12 +117,10 @@ export default function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    src="/portfolioImg/flypan.png"
-                    alt="Geometric logo"
-                    width={150}
-                    height={150}
-                    className="h-full w-full object-contain cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out"
+                  <LazyLoadImg
+                    link="/portfolioImg/flypan.png"
+                    name="Flying pan"
+                    className="object-contain cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out w-full h-full "
                   />
                 </a>
               </div>
@@ -134,44 +134,55 @@ export default function Portfolio() {
           "
           >
             <div
-              className="bg-white rounded-3xl overflow-hidden  cursor-pointer
-              border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              className=" rounded-3xl overflow-hidden cursor-pointer
+                         border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
               onClick={() => openModal("/portfolioImg/design1.jpg")}
             >
-              <div className="h-full w-full flex items-center justify-center ">
-                <img src="/portfolioImg/design1.jpg" />
+              <div className="h-full w-full flex items-center justify-center">
+                <LazyLoadImg
+                  link="/portfolioImg/design1.jpg"
+                  name="Design 1"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
+
             <div
-              className="bg-[#f9c74f] rounded-3xl overflow-hidden shadow-sm h-full cursor-pointer 
-              border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              className=" rounded-3xl overflow-hidden cursor-pointer
+                         border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
               onClick={() => openModal("/portfolioImg/design2.jpg")}
             >
-              <div className="h-full w-full flex  ">
-                <img
-                  src="/portfolioImg/design2.jpg"
-                  className="object-cover "
+              <div className="h-full w-full flex items-center justify-center">
+                <LazyLoadImg
+                  link="/portfolioImg/design2.jpg"
+                  name="Design 1"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
             <div
-              className="bg-white rounded-3xl overflow-hidden shadow-sm h-full cursor-pointer
-              border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              className=" rounded-3xl overflow-hidden cursor-pointer
+                         border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
               onClick={() => openModal("/portfolioImg/design3.jpg")}
             >
-              <div className="h-full w-full flex  ">
-                <img src="/portfolioImg/design3.jpg" className="object-cover" />
+              <div className="h-full w-full flex items-center justify-center">
+                <LazyLoadImg
+                  link="/portfolioImg/design3.jpg"
+                  name="Design 1"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div
-              className="bg-black rounded-3xl overflow-hidden shadow-sm h-full cursor-pointer
-              border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+              className=" rounded-3xl overflow-hidden cursor-pointer
+                         border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
               onClick={() => openModal("/portfolioImg/design4.png")}
             >
-              <div className="h-full w-full flex  ">
-                <img
-                  src="/portfolioImg/design4.png"
-                  className="object-cover "
+              <div className="h-full w-full flex items-center justify-center">
+                <LazyLoadImg
+                  link="/portfolioImg/design4.png"
+                  name="Design 1"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -183,7 +194,7 @@ export default function Portfolio() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:h-[524px]">
               <div
                 className="relative bg-white rounded-3xl overflow-hidden shadow-sm lg:col-span-2 cursor-pointer
-                          border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+                border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
                     "/portfolioImg/comeon00.jpg",
@@ -193,22 +204,24 @@ export default function Portfolio() {
                   )
                 }
               >
-                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow ">
+                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow z-10 ">
                   ❤️{" "}
                   {(hardcodedLikes["Come On"] || 0) +
                     (likesMap["Come On"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center">
-                  <img
-                    src="/portfolioImg/comeon00.jpg"
-                    alt="You are so annoying Noona!"
-                    className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
-                  />
+                <div className="h-full w-full flex items-center justify-center ">
+                  <div className=" transition-all duration-500 ease-in-out hover:scale-110">
+                    <LazyLoadImg
+                      link="/portfolioImg/comeon00.jpg"
+                      name="You are so annoying Noona!"
+                      className="object-cover w-full h-full "
+                    />
+                  </div>
                 </div>
               </div>
 
               <div
-                className="relative  rounded-3xl overflow-hidden shadow-sm cursor-pointer
+                className="relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
@@ -221,16 +234,18 @@ export default function Portfolio() {
                   )
                 }
               >
-                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black">
+                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black z-10">
                   ❤️{" "}
                   {(hardcodedLikes["Lovely"] || 0) + (likesMap["Lovely"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center ">
-                  <img
-                    src="/portfolioImg/lovely00.jpg"
-                    alt="Pretending you are not taking my pic"
-                    className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
-                  />
+                <div className="h-full w-full flex items-center justify-center">
+                  <div className=" transition-all duration-500 ease-in-out hover:scale-110">
+                    <LazyLoadImg
+                      link="/portfolioImg/lovely00.jpg"
+                      name="Pretending you are not taking my pic"
+                      className="object-cover w-full h-full "
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -248,17 +263,19 @@ export default function Portfolio() {
                   )
                 }
               >
-                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black">
+                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black z-10">
                   ❤️{" "}
                   {(hardcodedLikes["Sunvasion"] || 0) +
                     (likesMap["Sunvasion"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center ">
-                  <img
-                    src="/portfolioImg/frog00.jpg"
-                    alt="Someone tell this Sun to shine at night"
-                    className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
-                  />
+                <div className="h-full w-full flex items-center justify-center">
+                  <div className=" transition-all duration-500 ease-in-out hover:scale-110">
+                    <LazyLoadImg
+                      link="/portfolioImg/frog00.jpg"
+                      name="Someone tell this Sun to shine at night"
+                      className="object-cover w-full h-full "
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -276,17 +293,19 @@ export default function Portfolio() {
                   )
                 }
               >
-                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black">
+                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black z-10">
                   ❤️{" "}
                   {(hardcodedLikes["Pawparazzi"] || 0) +
                     (likesMap["Pawparazzi"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center ">
-                  <img
-                    src="/portfolioImg/canihavesome00.jpg"
-                    alt="You made it for me, right? Noona"
-                    className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
-                  />
+                <div className="h-full w-full flex items-center justify-center">
+                  <div className=" transition-all duration-500 ease-in-out hover:scale-110">
+                    <LazyLoadImg
+                      link="/portfolioImg/canihavesome00.jpg"
+                      name="You made it for me, right? Noona"
+                      className="object-cover w-full h-full "
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -304,19 +323,22 @@ export default function Portfolio() {
                   )
                 }
               >
-                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black">
+                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black z-10">
                   ❤️{" "}
                   {(hardcodedLikes["Meowpocalypse"] || 0) +
                     (likesMap["Meowpocalypse"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center ">
-                  <img
-                    src="/portfolioImg/apocalipse00.jpg"
-                    alt="Apocalypse is here, I might starve to death"
-                    className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center"
-                  />
+                <div className="h-full w-full flex items-center justify-center">
+                  <div className=" transition-all duration-500 ease-in-out hover:scale-110">
+                    <LazyLoadImg
+                      link="/portfolioImg/apocalipse00.jpg"
+                      name="Apocalypse is here, I might starve to death"
+                      className="object-cover w-full h-full "
+                    />
+                  </div>
                 </div>
               </div>
+
               <div
                 className="relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer lg:col-span-2
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
@@ -329,15 +351,17 @@ export default function Portfolio() {
                   )
                 }
               >
-                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black">
+                <div className="absolute top-2 right-2 bg-white/80 px-3 py-1 rounded-full text-sm font-medium shadow text-black z-10">
                   ❤️ {(hardcodedLikes["Pawma"] || 0) + (likesMap["Pawma"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center ">
-                  <img
-                    src="/portfolioImg/puma00.jpg"
-                    alt="Where is my PUMA deal?"
-                    className="object-cover w-full h-full transition-all duration-500 ease-in-out hover:scale-110 hover:object-center "
-                  />
+                <div className="h-full w-full flex items-center justify-center">
+                  <div className=" transition-all duration-500 ease-in-out hover:scale-110">
+                    <LazyLoadImg
+                      link="/portfolioImg/puma00.jpg"
+                      name="Where is my PUMA deal?"
+                      className="object-cover w-full h-full "
+                    />
+                  </div>
                 </div>
               </div>
             </div>

@@ -17,27 +17,36 @@ function Landing() {
           <FloatingPaths position={1} />
           <FloatingPaths position={-1} />
         </div>
-        <div className="flex flex-col lg:flex-row-reverse items-center justify-center w-full max-w-7xl mx-auto px-4 sm:px-8 gap-12 lg:gap-24 stack-on-small">
-          <div className="relative w-full lg:w-1/2 flex items-center justify-center ">
-            <div className="relative w-[80vw] h-[80vw] max-w-[400px] max-h-[400px] ">
+        <div className="flex flex-col lg:flex-row-reverse items-center justify-center w-full max-w-7xl mx-auto px-4 sm:px-8 gap-40 md:gap-12 lg:gap-24 stack-on-small">
+          <div className="relative w-full lg:w-1/2 flex items-center justify-center">
+            <div className="relative aspect-square w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] max-w-[400px] max-h-[400px] mt-10 md:mt-20">
+              {/* Background Image */}
               <motion.img
                 src={backgroundImg}
                 initial={{ opacity: 0, scale: 0.9, y: -100 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="absolute scale-160 md:scale-210 z-0 left-28 -top-52 md:left-52 md:-top-54 lg:left-50 lg:-top-72 cursor-pointer "
+                className="absolute w-[120%] h-[120%] scale-222 left-[50%] -top-[37%] object-contain
+                md:w-[110%] md:h-[110%] md:scale-280 md:left-46 md:-top-64 "
+                style={{ transform: "translateZ(0)" }}
+                // className="absolute scale-184 md:scale-210 z-0 left-34 -top-40 md:left-52 md:-top-54 lg:left-50 lg:-top-72 cursor-pointer  "
               />
+
+              {/* Portfolio Image */}
               <motion.img
                 src={portfolioImg}
                 alt="Portfolio"
-                className="relative z-10 rounded-full h-[400px] max-w-[350px] md:h-[500px] w-full md:max-w-[450px] object-cover pointer-events-none 
-                 md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-14
-                  will-change-transform "
                 initial={{ opacity: 0, scale: 0.9, y: -100, x: 50 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
+                className="absolute max-w-[350px] scale-90 -left-[7%]  md:left-0  object-cover rounded-full pointer-events-none
+                md:scale-120 md:-top-6"
+                style={{ transform: "translateZ(0)" }}
+                // className="absolute z-10 rounded-full h-[400px]  max-w-[350px] md:h-[500px] w-full md:max-w-[450px] object-cover pointer-events-none
+                //  md:translate-x-6 lg:translate-x-0 lg:-top-6 lg:-right-5 top-14
+                //   will-change-transform "
               />
             </div>
           </div>
@@ -49,8 +58,8 @@ function Landing() {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 text-stack will-change-transform"
           >
-            <div className="flex flex-col items-center mt-20 md:items-center sm:items-center lg:items-start md:mt-20">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-primary pt-10">
+            <div className="flex flex-col items-center mt-10 md:items-center sm:items-center lg:items-start md:mt-30 lg:mt-10">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-primary ">
                 Hello!
               </h1>
 
