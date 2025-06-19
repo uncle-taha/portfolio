@@ -44,7 +44,7 @@ export default function About() {
   return (
     <>
       <div className="max-w-6xl bg-white h-full flex flex-col justify-center items-center m-auto my-30 rounded-[20px] border-white/80 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border dark:bg-gray-900 ">
-        <div className="relative w-[90%] h-[600px] my-15">
+        <div className="relative w-[90%] h-[600px] my-8 px-2 md:my-10 md:mt-14 ">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1 }}
@@ -88,7 +88,7 @@ export default function About() {
             </motion.p>
           </div>
         </div>
-        <div className="block md:hidden mx-6  bg-gray-50 p-8 rounded-lg dark:bg-white/20 dark:text-white -mt-14">
+        <div className="block md:hidden mx-10 my-6  bg-gray-50 p-8 rounded-lg dark:bg-white/20 dark:text-white -mt-2">
           <p className="  ">
             Hi, I'm Ahadbek (you can call me taha). I'm a web developer with a
             background in Computer Science and a strong focus on design and user
@@ -100,9 +100,10 @@ export default function About() {
         </div>
         {/* skills expersitse */}
 
-        <h2 className="text-2xl font-bold mb-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-2">
+        <h2 className="w-[87%] text-2xl font-bold mb-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-6 ">
           Skills & Expertise
         </h2>
+
         <section className="flex flex-wrap gap-6 justify-between px-10 md:px-18">
           <motion.div
             initial={{ opacity: 0, scale: 0.8, x: -75 }}
@@ -159,7 +160,7 @@ export default function About() {
         {/* education */}
 
         <section className=" bg-white dark:bg-gray-900 px-10 md:px-18">
-          <h2 className="text-2xl font-bold mb-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-2">
+          <h2 className="text-2xl font-bold my-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-6">
             Education & Learning
           </h2>
 
@@ -229,7 +230,7 @@ export default function About() {
 
         {/* personal interests cicle stuff  */}
 
-        <h2 className="text-2xl font-bold mb-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-2 ">
+        <h2 className="w-[87%] text-2xl font-bold my-6 flex flex-col justify-center items-center border-b-2 border-gray-300 pb-6 ">
           Personal Interests
         </h2>
 

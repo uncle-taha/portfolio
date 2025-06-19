@@ -15,9 +15,15 @@ export default function CodeModal({ codeString }) {
   };
 
   const modal = (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-4 ">
-      <div className="bg-white w-full max-w-6xl max-h-screen  rounded shadow-lg relative flex flex-col p-4 overflow-hidden ">
-        <div className="flex-1 overflow-y-auto mt-20">
+    <div
+      className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center px-10  py-20 "
+      onClick={() => setOpen(false)}
+    >
+      <div
+        className="bg-white h-[70%] md:h-[95%] max-w-6xl  rounded shadow-lg relative flex flex-col p-4 overflow-hidden "
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex-1 overflow-y-auto ">
           <SyntaxHighlighter
             language="jsx"
             style={materialDark}

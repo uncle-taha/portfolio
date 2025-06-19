@@ -41,7 +41,7 @@ function Landing() {
                 whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="absolute max-w-[350px] scale-90 -left-[7%]  md:left-0  object-cover rounded-full pointer-events-none
+                className="absolute max-w-[350px] scale-90 -left-[7%] -top-1 rounded-[50%] md:left-0  object-cover md:rounded-full pointer-events-none
                 md:scale-120 md:-top-6"
                 style={{ transform: "translateZ(0)" }}
                 // className="absolute z-10 rounded-full h-[400px]  max-w-[350px] md:h-[500px] w-full md:max-w-[450px] object-cover pointer-events-none

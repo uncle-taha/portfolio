@@ -89,7 +89,7 @@ export default function Portfolio() {
                   <LazyLoadImg
                     link="/portfolioImg/weatherly.png"
                     name="Location checker app"
-                    className="object-fit cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out  h-full"
+                    className="object-cover cursor-pointer hover:scale-110 hover:object-center duration-500 ease-in-out  h-full"
                   />
                 </a>
               </div>
@@ -193,8 +193,8 @@ export default function Portfolio() {
           <div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:h-[524px]">
               <div
-                className="relative bg-white rounded-3xl overflow-hidden shadow-sm lg:col-span-2 cursor-pointer
-                border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
+                className=" max-h-[400px] relative bg-white rounded-3xl overflow-hidden shadow-sm lg:col-span-2 cursor-pointer
+                border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border "
                 onClick={() =>
                   openModal(
                     "/portfolioImg/comeon00.jpg",
@@ -209,19 +209,19 @@ export default function Portfolio() {
                   {(hardcodedLikes["Come On"] || 0) +
                     (likesMap["Come On"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center ">
+                <div className="h-full w-full flex items-center justify-center  ">
                   <div className=" transition-all duration-500 ease-in-out hover:scale-110">
                     <LazyLoadImg
                       link="/portfolioImg/comeon00.jpg"
                       name="You are so annoying Noona!"
-                      className="object-cover w-full h-full "
+                      className="object-cover w-full h-full  md:scale-190 lg:scale-100  "
                     />
                   </div>
                 </div>
               </div>
 
               <div
-                className="relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer
+                className="max-h-[400px] relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
@@ -243,14 +243,14 @@ export default function Portfolio() {
                     <LazyLoadImg
                       link="/portfolioImg/lovely00.jpg"
                       name="Pretending you are not taking my pic"
-                      className="object-cover w-full h-full "
+                      className="object-cover w-full h-full md:scale-110 lg:scale-100 "
                     />
                   </div>
                 </div>
               </div>
 
               <div
-                className="relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer 
+                className="max-h-[400px] relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer 
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
@@ -280,7 +280,7 @@ export default function Portfolio() {
               </div>
 
               <div
-                className="relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer
+                className="max-h-[400px] relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
@@ -298,19 +298,19 @@ export default function Portfolio() {
                   {(hardcodedLikes["Pawparazzi"] || 0) +
                     (likesMap["Pawparazzi"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center">
-                  <div className=" transition-all duration-500 ease-in-out hover:scale-110">
+                <div className="h-full w-full flex items-center justify-center object-top">
+                  <div className=" transition-all duration-500 ease-in-out hover:scale-110 ">
                     <LazyLoadImg
                       link="/portfolioImg/canihavesome00.jpg"
                       name="You made it for me, right? Noona"
-                      className="object-cover w-full h-full "
+                      className="object-cover w-full h-full lg:scale-100 "
                     />
                   </div>
                 </div>
               </div>
 
               <div
-                className="relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer
+                className="max-h-[400px] relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
@@ -340,7 +340,7 @@ export default function Portfolio() {
               </div>
 
               <div
-                className="relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer lg:col-span-2
+                className="max-h-[400px] relative bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer lg:col-span-2
                 border-white/80 dark:bg-white/20 dark:shadow-lg shadow-black/4 backdrop-blur-[5.2px] border"
                 onClick={() =>
                   openModal(
@@ -359,7 +359,7 @@ export default function Portfolio() {
                     <LazyLoadImg
                       link="/portfolioImg/puma00.jpg"
                       name="Where is my PUMA deal?"
-                      className="object-cover w-full h-full "
+                      className="object-cover w-full h-full scale-110 md:scale-160 lg:scale-100"
                     />
                   </div>
                 </div>
@@ -370,7 +370,7 @@ export default function Portfolio() {
       </div>
       {modal.open && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white/63 backdrop-blur-[30px] cursor-pointer "
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white/63 backdrop-blur-[30px] cursor-pointer  py-20"
           onClick={() => setModal({ ...modal, open: false })}
         >
           <div
