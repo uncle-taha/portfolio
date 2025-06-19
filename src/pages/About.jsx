@@ -50,6 +50,7 @@ export default function About() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
+            className="w-full h-full object-cover "
           >
             <LazyLoadImg
               link={abougBg}
@@ -58,13 +59,13 @@ export default function About() {
             />
           </motion.div>
 
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-start p-10 justify-start md:justify-center md:gap-40">
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-start p-10 justify-start md:justify-center md:gap-34">
             <motion.h1
               initial={{ opacity: 0, scale: 0.8, x: -55 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="text-4xl sm:text-5xl md:text-[64px] font-bold mb-4 break-words leading-tight  dark:text-black will-change-transform"
+              className="text-4xl sm:text-5xl md:text-[64px] font-bold mb-4 break-words leading-tight  dark:text-black will-change-transform "
             >
               Igniting <br />
               Ideas <br />
@@ -75,7 +76,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="hidden md:block text-lg text-white font-semibold will-change-transform"
+              className=" hidden md:block text-lg text-black md:text-white font-semibold will-change-transform  "
             >
               Hi, I'm Ahadbek (you can call me taha). I'm a web developer with a
               background in Computer Science and a strong focus on design and
@@ -87,7 +88,7 @@ export default function About() {
             </motion.p>
           </div>
         </div>
-        <div className="block md:hidden mx-6  bg-gray-50 p-8 rounded-lg dark:bg-white/20 dark:text-white">
+        <div className="block md:hidden mx-6  bg-gray-50 p-8 rounded-lg dark:bg-white/20 dark:text-white -mt-14">
           <p className="  ">
             Hi, I'm Ahadbek (you can call me taha). I'm a web developer with a
             background in Computer Science and a strong focus on design and user
