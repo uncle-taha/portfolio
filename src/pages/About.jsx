@@ -78,24 +78,27 @@ export default function About() {
               viewport={{ once: true }}
               className=" hidden md:block text-lg text-black md:text-white font-semibold will-change-transform  "
             >
-              Hi, I'm Ahadbek (you can call me taha). I'm a web developer with a
-              background in Computer Science and a strong focus on design and
-              user experience. I specialize in crafting user-friendly web
-              experiences that balance clean design with solid code, blending
-              formal education with hands-on experience. Beyond coding, I
-              explore design trends, sketch UI ideas, and continuously learn to
-              grow as a developer.
+              Hi, I'm Ahadbek (but you can call me taha). I'm a web developer
+              with a background in Computer Science, focused on creating
+              intuitive and visually engaging user experiences. I build clean,
+              user-friendly websites that combine thoughtful design with solid,
+              maintainable code. My approach blends academic knowledge with
+              real-world practice. Outside of coding, I stay inspired by
+              exploring design trends, sketching interface ideas, and constantly
+              learning to improve my craft.
             </motion.p>
           </div>
         </div>
         <div className="block md:hidden mx-10 my-6  bg-gray-50 p-8 rounded-lg dark:bg-white/20 dark:text-white -mt-2">
           <p className="  ">
-            Hi, I'm Ahadbek (you can call me taha). I'm a web developer with a
-            background in Computer Science and a strong focus on design and user
-            experience. I specialize in crafting user-friendly web experiences
-            that balance clean design with solid code, blending formal education
-            with hands-on experience. Beyond coding, I explore design trends,
-            sketch UI ideas, and continuously learn to grow as a developer.
+            Hi, I'm Ahadbek (but you can call me taha). I'm a web developer with
+            a background in Computer Science, focused on creating intuitive and
+            visually engaging user experiences. I build clean, user-friendly
+            websites that combine thoughtful design with solid, maintainable
+            code. My approach blends academic knowledge with real-world
+            practice. Outside of coding, I stay inspired by exploring design
+            trends, sketching interface ideas, and constantly learning to
+            improve my craft.
           </p>
         </div>
         {/* skills expersitse */}

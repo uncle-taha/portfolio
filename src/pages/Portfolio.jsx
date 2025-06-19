@@ -78,7 +78,7 @@ export default function Portfolio() {
                 />
               </div>
             </Link>
-            <div className=" rounded-3xl overflow-hidden shadow-sm h-full">
+            <div className=" rounded-3xl overflow-hidden shadow-sm max-h-[400px] md:max-h-full">
               <div className="h-full w-full">
                 <a
                   href="https://uncle-taha.github.io/weatherly/"
@@ -298,7 +298,7 @@ export default function Portfolio() {
                   {(hardcodedLikes["Pawparazzi"] || 0) +
                     (likesMap["Pawparazzi"] || 0)}
                 </div>
-                <div className="h-full w-full flex items-center justify-center object-top">
+                <div className="h-full w-full flex items-center justify-center ">
                   <div className=" transition-all duration-500 ease-in-out hover:scale-110 ">
                     <LazyLoadImg
                       link="/portfolioImg/canihavesome00.jpg"
@@ -398,10 +398,10 @@ export default function Portfolio() {
             <img
               src={modal.src}
               alt={modal.alt}
-              className={`w-full object-contain mb-4 rounded-xl ${
+              className={`object-contain mb-4 rounded-xl ${
                 activeTab === "Design"
                   ? "max-h-[1600px] max-w-[1200px] "
-                  : "max-h-[600px]"
+                  : "max-h-[400px] min-w-full object-cover "
               }`}
             />
             {activeTab !== "Design" && (
@@ -417,9 +417,11 @@ export default function Portfolio() {
                 </button>
               </div>
             )}
-            <div className="text-left relative pl-4 ">
-              <h2 className=" text-2xl font-bold ">{modal.title}</h2>
-              <p className="text-lg text-gray-700 mb-6">{modal.alt}</p>
+            <div className="relative flex flex-col justify-end">
+              <h2 className="text-2xl font-bold break-words ">{modal.title}</h2>
+              <p className="text-lg text-gray-700 mb-6 break-words">
+                {modal.alt}
+              </p>
             </div>
           </div>
         </div>

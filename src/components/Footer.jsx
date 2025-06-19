@@ -25,10 +25,11 @@ function Footer({ darkMode }) {
                 Hands-on graphic design solutions that <br />
                 connect with your target audience
               </p>
-              <Link to="/contact">
-                <div className="flex justify-center md:justify-start mt-6">
-                  <Button label="Contact" classname="px-10 w-auto" />
-                </div>
+              <Link
+                to="/contact"
+                className="flex justify-center md:justify-start mt-6"
+              >
+                <Button label="Contact" className="px-10 w-auto " />
               </Link>
             </div>
 
