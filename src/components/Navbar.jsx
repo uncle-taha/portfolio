@@ -84,7 +84,7 @@ function Navbar({ children, darkMode, toggleDarkMode }) {
 
       {/* Dark Mode Toggle */}
       <div
-        className="flex flex-col fixed bottom-10 right-10 p-4 border rounded-lg 
+        className="flex flex-col fixed bottom-4 right-4 md:bottom-10 md:right-10  p-3 md:p-4 border rounded-lg 
   transition-all duration-300 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 z-[999]"
       >
         <span

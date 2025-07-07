@@ -198,8 +198,8 @@ export default function Portfolio() {
                 onClick={() =>
                   openModal(
                     "/portfolioImg/comeon00.jpg",
-                    `Title: ${"\u00a0".repeat(10)}"You are so annoying Noona!"`,
-                    `Name:  ${"\u00a0".repeat(2)}"Come On Bruh!"`,
+                    `Title: "You are so annoying Noona!"`,
+                    `Name:  "Come On Bruh!"`,
                     "Come On"
                   )
                 }
@@ -226,10 +226,8 @@ export default function Portfolio() {
                 onClick={() =>
                   openModal(
                     "/portfolioImg/lovely00.jpg",
-                    `Title: ${"\u00a0".repeat(
-                      10
-                    )}"Pretending you are not taking my pic"`,
-                    `Name:  ${"\u00a0".repeat(2)}"Lovely"`,
+                    `Title: "Pretending you are not taking my pic"`,
+                    `Name:  "Lovely"`,
                     "Lovely"
                   )
                 }
@@ -255,10 +253,8 @@ export default function Portfolio() {
                 onClick={() =>
                   openModal(
                     "/portfolioImg/frog00.jpg",
-                    `Title: ${"\u00a0".repeat(
-                      10
-                    )}"Someone tell this Sun to shine at night"`,
-                    `Name:  ${"\u00a0".repeat(2)}"Sunvasion"`,
+                    `Title: "Someone tell this Sun to shine at night"`,
+                    `Name:  "Sunvasion"`,
                     "Sunvasion"
                   )
                 }
@@ -285,10 +281,8 @@ export default function Portfolio() {
                 onClick={() =>
                   openModal(
                     "/portfolioImg/canihavesome00.jpg",
-                    `Title: ${"\u00a0".repeat(
-                      1
-                    )}"You made it for me, right? Noona"`,
-                    `Name:  ${"\u00a0".repeat(2)}"Pawparazzi"`,
+                    `Title: "You made it for me, right? Noona"`,
+                    `Name:  "Pawparazzi"`,
                     "Pawparazzi"
                   )
                 }
@@ -315,10 +309,8 @@ export default function Portfolio() {
                 onClick={() =>
                   openModal(
                     "/portfolioImg/apocalipse00.jpg",
-                    `Title: ${"\u00a0".repeat(
-                      1
-                    )}"Apocalypse is here, I might starve to death"`,
-                    `Name:  ${"\u00a0".repeat(2)}"Meowpocalypse"`,
+                    `Title: "I might starve to death"`,
+                    `Name:  "Meowpocalypse"`,
                     "Meowpocalypse"
                   )
                 }
@@ -345,8 +337,8 @@ export default function Portfolio() {
                 onClick={() =>
                   openModal(
                     "/portfolioImg/puma00.jpg",
-                    `Title: ${"\u00a0".repeat(1)}"Where is my PUMA deal?"`,
-                    `Name:  ${"\u00a0".repeat(2)}"Pawma"`,
+                    `Title: "Where is my PUMA deal?"`,
+                    `Name:  "Pawma"`,
                     "Pawma"
                   )
                 }
@@ -378,7 +370,7 @@ export default function Portfolio() {
         ${
           activeTab === "Design"
             ? "max-w-[90vw] max-h-[80vh] overflow-auto mt-[190px] mb-[50px]"
-            : "max-w-[70vw] max-h-[50vh]"
+            : "max-w-[70vw] max-h-[60vh]"
         }`}
             onClick={(e) => e.stopPropagation()}
           >
@@ -418,8 +410,10 @@ export default function Portfolio() {
               </div>
             )}
             <div className="relative flex flex-col justify-end">
-              <h2 className="text-2xl font-bold break-words ">{modal.title}</h2>
-              <p className="text-lg text-gray-700 mb-6 break-words">
+              <h2 className="sm:text-xl md:text-2xl font-bold break-words ">
+                {modal.title}
+              </h2>
+              <p className="sm:text-sm md:text-lg text-gray-700  break-words">
                 {modal.alt}
               </p>
             </div>
