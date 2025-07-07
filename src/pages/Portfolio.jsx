@@ -413,7 +413,7 @@ export default function Portfolio() {
               <h2 className="sm:text-xl md:text-2xl font-bold break-words ">
                 {modal.title}
               </h2>
-              <p className="sm:text-sm md:text-lg text-gray-700 mb-2 break-words">
+              <p className="sm:text-sm md:text-lg text-gray-700 mb-2 pb-2 break-words">
                 {modal.alt}
               </p>
             </div>
