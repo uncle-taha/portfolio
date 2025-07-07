@@ -24,7 +24,7 @@ function Home() {
 
   return (
     <>
-      <Landing />
+      {/* <Landing /> */}
       <Title
         title="Areas of Expertise"
         paragraph="The Tools & Technologies That Power My Work."

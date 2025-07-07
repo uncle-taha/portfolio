@@ -1,4 +1,5 @@
 // import AnimatedShape from "../components/AnimatedShape";
+import React from "react";
 import Button from "../components/Button";
 import { MoveRight } from "lucide-react";
 import { FaTelegram, FaLinkedin, FaGithub } from "react-icons/fa";
@@ -11,7 +12,7 @@ import backgroundImg from "/portfolioImg/background.svg";
 
 function Landing() {
   return (
-    <div className="relative z-0 min-h-screen w-full overflow-hidden bg-[#dfe4f2] flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
+    <div className="relative z-0 min-h-screen w-full overflow-hidden bg-[#dfe4f2]  flex items-center justify-center py-12 lg:py-24 dark:bg-[#14121a]">
       <div className="w-full max-w-[100vw] px-4">
         <div className="absolute inset-0 z-0 -top-80 -left-80 md:-top-40 md:-left-60 hidden sm:block">
           <FloatingPaths position={1} />
@@ -132,4 +133,4 @@ function Landing() {
   );
 }
 
-export default Landing;
+export default React.memo(Landing);

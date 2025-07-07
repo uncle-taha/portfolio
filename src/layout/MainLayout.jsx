@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Logo from "../components/Logo";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import Landing from "../components/Landing";
 
 function MainLayout() {
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -22,15 +24,25 @@ function MainLayout() {
     localStorage.setItem("theme", newMode ? "dark" : "light");
   };
 
+  // Instead of conditional rendering, always render Landing but hide/show via CSS
+  const isHome = location.pathname === "/";
+
   return (
     <>
       <ScrollToTop />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
         <Logo className="mr-auto" />
       </Navbar>
-      <main className="flex-grow">
+
+      {/* Keep Landing mounted, hide with CSS */}
+      <div style={{ display: isHome ? "block" : "none" }}>
+        <Landing />
+      </div>
+
+      <main className="flex-grow relative z-10">
         <Outlet />
       </main>
+
       <Footer darkMode={darkMode} />
     </>
   );
